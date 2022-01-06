@@ -13,7 +13,7 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const logo =
-  'https://uploads-ssl.webflow.com/60d83e3c6cf84748f7d0a62b/61aa33f03400541381c2b2f5_MyHomePlanet.png';
+  'https://s1.qwant.com/thumbr/0x380/3/5/be45998edad9e76da3935c4be21a1b3c3e3a796dfd3153e298a206fd43c965/depositphotos_116405670-stock-photo-small-grey-white-polka-dot.jpg?u=https%3A%2F%2Fst2.depositphotos.com%2F6442704%2F11640%2Fi%2F450%2Fdepositphotos_116405670-stock-photo-small-grey-white-polka-dot.jpg';
 
 const FeatureText = () => (
   <div>
