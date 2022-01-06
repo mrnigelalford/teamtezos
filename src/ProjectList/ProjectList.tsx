@@ -10,7 +10,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  height: '4em',
+  // height: '4em',
 }));
 const description =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
@@ -39,28 +39,26 @@ interface Props {
 }
 
 const TitleBar = (props: Props) => (
-  <div style={{ display: 'flex' }}>
+  <div style={{ display: 'flex', width: '100%' }}>
     <Typography variant="h5" gutterBottom component="div">
       {props.title}
     </Typography>
     {props.CTA && (
-      <Typography sx={{ marginLeft: 'auto' }} variant="h5" gutterBottom component="div">
-        <Link href="#" variant="body2">
-          {props.CTA}
-        </Link>
-      </Typography>
+      <Button sx={{ marginLeft: 'auto' }} variant="text">
+        {props.CTA}
+      </Button>
     )}
   </div>
 );
 
 export default function ProjectList(props: Props) {
   return (
-    <Box sx={{ flexGrow: 1 }} style={{ marginTop: '2em' }}>
+    <Box sx={{ flexGrow: 1, marginTop: '2em', display: 'flex', flexWrap: 'wrap' }}>
       <TitleBar title={props.title} CTA={props.CTA} />
       <Grid container spacing={2}>
         {testData.slice(0, 4).map((td, i) => (
           <Grid item xs={12} sm={3} key={td.title + i}>
-            <Item sx={{ height: '14em', display: 'flex', flexWrap: 'wrap' }}>
+            <Item sx={{ display: 'flex', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 <img src={td.logo} alt="coolLogo" style={{ width: '3em' }} />
                 <Typography
