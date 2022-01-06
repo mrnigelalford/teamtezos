@@ -75,6 +75,7 @@ export default function Navbar() {
     handleMobileMenuClose();
   };
 
+  const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   // const handleMobileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
   //   setMobileMoreAnchorEl(event.currentTarget);
   // };
@@ -151,7 +152,7 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <MenuIcon />
@@ -174,6 +175,7 @@ export default function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
+      <Offset />
       {renderMobileMenu}
       {renderMenu}
     </Box>
