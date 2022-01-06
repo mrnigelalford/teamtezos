@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-import { Link, Typography } from '@mui/material';
+import { Button, Link, Typography } from '@mui/material';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -32,29 +32,44 @@ const FeatureText = () => (
   </div>
 );
 
+const mockData = {
+  title: 'Explore the Tezos Ecosystem',
+  description:
+    'Our mission is to make information more accessible by providing an overview of all projects and dApps building on Tezos.',
+};
+
+const FeatureBox = () => (
+  <Item sx={{ display: 'flex', textAlign: 'left' }}>
+    <FeatureText />
+    <img src={logo} alt="coolLogo" style={{ width: '6em', height: '5em', marginLeft: 'auto' }} />
+  </Item>
+);
+
 export default function Header() {
   return (
     <Box style={{ marginTop: '2em' }} sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={8}>
-          {/* <Item> */}
-          <Grid item xs={12}>
-            <Item style={{ border: '1px solid grey', height: '1em' }}>xs=4</Item>
-          </Grid>
-          <Grid item xs={12}>
-            <Item style={{ border: '1px solid grey', height: '1em' }}>xs=8</Item>
-          </Grid>
-          {/* </Item> */}
+        <Grid item xs={12} md={7}>
+          <Typography style={{ textAlign: 'left' }} variant="h4" gutterBottom component="div">
+            {mockData.title}
+          </Typography>
+          <Typography
+            style={{ textAlign: 'left', marginBottom: '.5em', marginTop: '.5em' }}
+            variant="body1"
+            gutterBottom
+            component="div"
+          >
+            {mockData.description}
+          </Typography>
+          <div style={{ marginTop: '1.5em', display: 'flex' }}>
+            <Button variant="outlined">Explore all projects</Button>
+            <Button variant="text" sx={{ marginLeft: '5em' }}>
+              Tezos Ecosystem
+            </Button>
+          </div>
         </Grid>
-        <Grid item xs={4}>
-          <Item sx={{ display: 'flex', textAlign: 'left' }}>
-            <FeatureText />
-            <img
-              src={logo}
-              alt="coolLogo"
-              style={{ width: '6em', height: '5em', marginLeft: 'auto' }}
-            />
-          </Item>
+        <Grid item xs={12} md={4} sx={{ marginLeft: 'auto', textAlign: 'left' }}>
+          <FeatureBox />
         </Grid>
       </Grid>
     </Box>
