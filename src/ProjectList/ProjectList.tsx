@@ -81,9 +81,7 @@ export default function ProjectList(props: Props) {
               >
                 {td.description}
               </Typography>
-              <Button variant="contained" sx={{ marginTop: '1em', marginLeft: 'auto' }}>
-                Learn more
-              </Button>
+              <Button sx={{ marginTop: '1em', marginLeft: 'auto' }}>Learn more</Button>
             </Item>
           </Grid>
         ))}
