@@ -38,22 +38,25 @@ interface Props {
   CTA?: string;
 }
 
+const TitleBar = (props: Props) => (
+  <div style={{ display: 'flex' }}>
+    <Typography variant="h5" gutterBottom component="div">
+      {props.title}
+    </Typography>
+    {props.CTA && (
+      <Typography sx={{ marginLeft: 'auto' }} variant="h5" gutterBottom component="div">
+        <Link href="#" variant="body2">
+          {props.CTA}
+        </Link>
+      </Typography>
+    )}
+  </div>
+);
+
 export default function ProjectList(props: Props) {
   return (
     <Box sx={{ flexGrow: 1 }} style={{ marginTop: '2em' }}>
-      <div style={{ display: 'flex' }}>
-        <Typography variant="h5" gutterBottom component="div">
-          {props.title}
-        </Typography>
-        {props.CTA && (
-          <Typography sx={{ marginLeft: 'auto' }} variant="h5" gutterBottom component="div">
-            <Link href="#" variant="body2">
-              {props.CTA}
-            </Link>
-          </Typography>
-        )}
-      </div>
-
+      <TitleBar title={props.title} CTA={props.CTA} />
       <Grid container spacing={2}>
         {testData.map((td, i) => (
           <Grid item xs={12} sm={3} key={td.title + i}>
