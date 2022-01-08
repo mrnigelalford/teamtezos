@@ -25,7 +25,7 @@ import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
 
 interface Props {}
-const title = 'Super Awesome Project';
+const title = 'ProjectOne';
 
 const sampleProjects = [
   {
@@ -112,31 +112,28 @@ export default function Ecosystem(props: Props) {
       </Grid>
       <Grid container spacing={2} sx={{ marginTop: '2em', display: 'flex' }}>
         {categories.map((cat) => (
-          <Grid item xs={12} sm={4}>
-            <Item style={{ height: 'auto' }}>
+          <Grid item xs={12} sm={3}>
+            <Item style={{ height: 'auto', textAlign: 'left' }}>
               <Typography
                 variant="subtitle2"
                 gutterBottom
                 component="div"
-                sx={{ flexBasis: '50%' }}
+                sx={{ flexBasis: '50%', textAlign: 'center' }}
               >
                 {cat.title}
               </Typography>
               {cat.projects.map((p) => (
-                <div
-                  style={{
-                    marginLeft: '.5em',
-                    marginRight: '.5em',
-                    border: '1px solid greyd',
-                    display: 'flex',
-                    padding: '.5em',
-                  }}
-                >
+                <Box sx={{ display: 'inline-flex', marginRight: '1em' }}>
                   <img src={p.img} alt="project" style={{ width: '2em', height: '2em' }} />
-                  <Typography variant="body2" gutterBottom component="div">
+                  <Typography
+                    variant="body2"
+                    sx={{ marginLeft: '.3em' }}
+                    gutterBottom
+                    component="div"
+                  >
                     {p.title}
                   </Typography>
-                </div>
+                </Box>
               ))}
             </Item>
           </Grid>
