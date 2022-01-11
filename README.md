@@ -31,16 +31,16 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Task-list
 
-cross-app footer spacing adjust
-create twitter banner
-build data table of all projects
-app navigation
-browser back button should work
-project title - html
-create favicon | icon | domain name
-in-app search
+- cross-app footer spacing adjust
+- create twitter banner
+- build data table of all projects
+- app navigation
+- browser back button should work
+- project title - html
+- create favicon | icon | domain name
+- in-app search
 
-categories and filter page
-start tweeting
-theming and coloring
-app walk through
+- categories and filter page
+- start tweeting
+- theming and coloring
+- app walk through
