@@ -7,6 +7,7 @@ import Categories from './Categories/categories';
 import Ecosystem from './Ecosystem/ecosystem';
 import Header from './Header/Header';
 import Navbar from './Nav/Nav';
+import Project from './Project/project';
 import ProjectList from './ProjectList/ProjectList';
 
 const Home = () => (
@@ -16,8 +17,6 @@ const Home = () => (
     <Categories title="Categories" />
     <ProjectList title="Popular Products" />
     <ProjectList title="Recently Added" CTA="Show all" />
-    <InfoBanner />
-    <BottomNav />
   </Container>
 );
 
@@ -28,7 +27,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="ecosystem" element={<Ecosystem />} />
+        <Route path="project/:id" element={<Project />} />
       </Routes>
+      <InfoBanner />
+      <BottomNav />
     </div>
   );
 }
