@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
-import { typography } from '@mui/system';
 import { Item } from '../Categories/categories';
-import { FeatureBox, logo } from '../Header/Header';
+import { FeatureBox } from '../Header/Header';
 import {
   faBalanceScaleRight,
   faCoins,
@@ -17,102 +16,81 @@ import {
   faPiggyBank,
   faRocket,
   faSchool,
-  faStore,
   faUsers,
   faWallet,
 } from '@fortawesome/free-solid-svg-icons';
 import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
+import { useEffect } from 'react';
+import tezosProjects from '../Data/data';
 
 interface Props {}
-const title = 'ProjectOne';
 
-const sampleProjects = [
-  {
-    title,
-    img: logo,
-  },
-  {
-    title,
-    img: logo,
-  },
-  {
-    title,
-    img: logo,
-  },
-  {
-    title,
-    img: logo,
-  },
-  {
-    title,
-    img: logo,
-  },
-  {
-    title,
-    img: logo,
-  },
-];
+interface ProjectData {
+  type?: string;
+  title?: string;
+  description?: string;
+  website_link?: string;
+  social_link?: string;
+  misc_link?: string;
+  telegram_link?: string;
+  img?: string;
+}
 
-// const categories = [
-//   {
-//     category: 'DEX',
-//     projects: sampleProjects,
-//   },
-//   {
-//     category: 'wallets',
-//     projects: sampleProjects,
-//   },
-//   {
-//     category: 'lending & borrowing',
-//     projects: sampleProjects,
-//   },
-//   {
-//     category: 'DEX',
-//     projects: sampleProjects,
-//   },
-//   {
-//     category: 'wallets',
-//     projects: sampleProjects,
-//   },
-//   {
-//     category: 'lending & borrowing',
-//     projects: sampleProjects,
-//   },
-// ];
-
-export const categories = [
-  { title: 'Popular', icon: faHeart, projects: sampleProjects },
-  { title: 'Meme Coins', icon: faPaw, projects: sampleProjects },
-  { title: 'Marketplaces', icon: faStore, projects: sampleProjects },
-  { title: 'Insurance', icon: faHouseDamage, projects: sampleProjects },
-  { title: 'Launchpad', icon: faRocket, projects: sampleProjects },
-  { title: 'Data', icon: faDatabase, projects: sampleProjects },
-  { title: 'Stablecoin', icon: faDonate, projects: sampleProjects },
-  { title: 'Oracle', icon: faGlasses, projects: sampleProjects },
-  { title: 'Wallets', icon: faWallet, projects: sampleProjects },
-  { title: 'Social', icon: faUsers, projects: sampleProjects },
-  { title: 'NFT', icon: faArtstation, projects: sampleProjects },
-  { title: 'Lending & Borrowing', icon: faBalanceScaleRight, projects: sampleProjects },
-  { title: 'Identity', icon: faIdBadge, projects: sampleProjects },
-  { title: 'Community', icon: faPeopleArrows, projects: sampleProjects },
-  { title: 'Gaming', icon: faGamepad, projects: sampleProjects },
-  { title: 'Gambling', icon: faMoneyBillAlt, projects: sampleProjects },
-  { title: 'Infrastructure', icon: faSchool, projects: sampleProjects },
-  { title: 'Exchanges (DEX)', icon: faPiggyBank, projects: sampleProjects },
-  { title: 'Payment', icon: faCreditCard, projects: sampleProjects },
-  { title: 'DEFI', icon: faCoins, projects: sampleProjects },
+export const tezProjects = [
+  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
+  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
+  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
+  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
+  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
+  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
+  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
+  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
+  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
+  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
+  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
+  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
+  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
+  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
+  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
+  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
+  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
+  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
+  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
 ];
 
 export default function Ecosystem(props: Props) {
+  useEffect(() => {
+    tezosProjects.forEach((project: ProjectData) => {
+      const found = tezProjects.find(
+        (cat) => cat.type.toLowerCase() === project.type?.toLowerCase()
+      );
+      if (found) {
+        found.projects.push({
+          title: project.title,
+          description: project.description,
+          website_link: project.website_link,
+          social_link: project.social_link,
+          misc_link: project.misc_link,
+          telegram_link: project.telegram_link,
+          img: project.img,
+        });
+      }
+    });
+    console.log('done');
+
+    // setProjects(tezProjects);
+  }, []);
+
   return (
     <Container sx={{ marginTop: '2em', maxWidth: 'initial !important' }}>
       <Grid item xs={12} md={4} sx={{ marginRight: 'auto', textAlign: 'left' }}>
         <FeatureBox />
+        Count: {tezosProjects.length}
       </Grid>
       <Grid container spacing={2} sx={{ marginTop: '2em', display: 'flex' }}>
-        {categories.map((cat) => (
-          <Grid item xs={12} sm={3}>
+        {tezProjects.map((cat) => (
+          <Grid item xs={12} sm={3} key={cat.type}>
             <Item style={{ height: 'auto', textAlign: 'left' }}>
               <Typography
                 variant="subtitle2"
@@ -120,7 +98,7 @@ export default function Ecosystem(props: Props) {
                 component="div"
                 sx={{ flexBasis: '50%', textAlign: 'center' }}
               >
-                {cat.title}
+                {cat.type} ({cat.projects.length})
               </Typography>
               {cat.projects.map((p) => (
                 <Box sx={{ display: 'inline-flex', marginRight: '1em' }}>

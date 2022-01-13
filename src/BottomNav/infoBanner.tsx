@@ -13,7 +13,7 @@ const DataBrick = (bricks: brickProps) => {
         {bricks.title}
       </Typography>
       {bricks.links.map((brick) => (
-        <Typography variant="body1" gutterBottom component="div">
+        <Typography key={brick.text} variant="body1" gutterBottom component="div">
           <Link href={brick.nav} variant="body2">
             {brick.text}
           </Link>
