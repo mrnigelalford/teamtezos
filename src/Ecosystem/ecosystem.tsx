@@ -21,7 +21,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import tezosProjects from '../Data/data';
 
 interface Props {}
@@ -60,6 +60,8 @@ export const tezProjects = [
 ];
 
 export default function Ecosystem(props: Props) {
+  const [projects, setProjects] = React.useState(tezProjects as ProjectData[]);
+
   useEffect(() => {
     tezosProjects.forEach((project: ProjectData) => {
       const found = tezProjects.find(
@@ -77,10 +79,9 @@ export default function Ecosystem(props: Props) {
         });
       }
     });
-    console.log('done');
 
-    // setProjects(tezProjects);
-  }, []);
+    setProjects(tezProjects);
+  }, [projects]);
 
   return (
     <Container sx={{ marginTop: '2em', maxWidth: 'initial !important' }}>
@@ -89,8 +90,8 @@ export default function Ecosystem(props: Props) {
         Count: {tezosProjects.length}
       </Grid>
       <Grid container spacing={2} sx={{ marginTop: '2em', display: 'flex' }}>
-        {tezProjects.map((cat) => (
-          <Grid item xs={12} sm={3} key={cat.type}>
+        {tezProjects.map((cat, i) => (
+          <Grid item xs={12} sm={3} key={i}>
             <Item style={{ height: 'auto', textAlign: 'left' }}>
               <Typography
                 variant="subtitle2"
@@ -100,8 +101,8 @@ export default function Ecosystem(props: Props) {
               >
                 {cat.type} ({cat.projects.length})
               </Typography>
-              {cat.projects.map((p) => (
-                <Box sx={{ display: 'inline-flex', marginRight: '1em' }}>
+              {cat.projects.map((p, i) => (
+                <Box key={i} sx={{ display: 'inline-flex', marginRight: '1em' }}>
                   <img src={p.img} alt="project" style={{ width: '2em', height: '2em' }} />
                   <Typography
                     variant="body2"
