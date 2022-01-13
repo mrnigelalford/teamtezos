@@ -1,66 +1,14 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { Item } from '../Categories/categories';
 import { FeatureBox } from '../Header/Header';
-import {
-  faBalanceScaleRight,
-  faCoins,
-  faDatabase,
-  faDonate,
-  faGamepad,
-  faGlasses,
-  faHeart,
-  faHouseDamage,
-  faMoneyBillAlt,
-  faPaw,
-  faPeopleArrows,
-  faPiggyBank,
-  faRocket,
-  faSchool,
-  faUsers,
-  faWallet,
-} from '@fortawesome/free-solid-svg-icons';
-import { faArtstation } from '@fortawesome/free-brands-svg-icons';
-import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
+
 import React, { useEffect } from 'react';
-import tezosProjects from '../Data/data';
+import tezosProjects, { PR, ProjectData, tezProjects } from '../Data/data';
 
 interface Props {}
 
-interface ProjectData {
-  type?: string;
-  title?: string;
-  description?: string;
-  website_link?: string;
-  social_link?: string;
-  misc_link?: string;
-  telegram_link?: string;
-  img?: string;
-}
-
-export const tezProjects = [
-  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
-  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
-  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
-  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
-  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
-  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
-  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
-  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
-  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
-  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
-  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
-  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
-  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
-  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
-  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
-  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
-  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
-  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
-  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
-];
-
 export default function Ecosystem(props: Props) {
-  const [projects, setProjects] = React.useState(tezProjects as ProjectData[]);
+  const [projects, setProjects] = React.useState(tezProjects as PR[]);
 
   useEffect(() => {
     tezosProjects.forEach((project: ProjectData) => {
@@ -79,9 +27,8 @@ export default function Ecosystem(props: Props) {
         });
       }
     });
-
-    setProjects(tezProjects);
-  }, [projects]);
+    setProjects(tezProjects.filter((cat) => cat.projects.length) as PR[]);
+  }, []);
 
   return (
     <Container sx={{ marginTop: '2em', maxWidth: 'initial !important' }}>
@@ -90,7 +37,7 @@ export default function Ecosystem(props: Props) {
         Count: {tezosProjects.length}
       </Grid>
       <Grid container spacing={2} sx={{ marginTop: '2em', display: 'flex' }}>
-        {tezProjects.map((cat, i) => (
+        {projects.map((proj, i) => (
           <Grid item xs={12} sm={3} key={i}>
             <Item style={{ height: 'auto', textAlign: 'left' }}>
               <Typography
@@ -99,9 +46,9 @@ export default function Ecosystem(props: Props) {
                 component="div"
                 sx={{ flexBasis: '50%', textAlign: 'center' }}
               >
-                {cat.type} ({cat.projects.length})
+                {proj.type} ({proj.projects.length})
               </Typography>
-              {cat.projects.map((p, i) => (
+              {proj.projects.map((p, i) => (
                 <Box key={i} sx={{ display: 'inline-flex', marginRight: '1em' }}>
                   <img src={p.img} alt="project" style={{ width: '2em', height: '2em' }} />
                   <Typography

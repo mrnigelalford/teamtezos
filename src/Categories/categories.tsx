@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { tezProjects } from '../Ecosystem/ecosystem';
+import { tezProjects } from '../Data/data';
 
 export const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,

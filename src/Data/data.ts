@@ -1,6 +1,32 @@
+import {
+  faBalanceScaleRight,
+  faCoins,
+  faDatabase,
+  faDonate,
+  faGamepad,
+  faGlasses,
+  faHeart,
+  faHouseDamage,
+  faMoneyBillAlt,
+  faPaw,
+  faPeopleArrows,
+  faPiggyBank,
+  faRocket,
+  faSchool,
+  faUsers,
+  faWallet,
+} from '@fortawesome/free-solid-svg-icons';
+import { faArtstation } from '@fortawesome/free-brands-svg-icons';
+import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
+import { Icon } from '@fortawesome/fontawesome-svg-core';
+
 const tezosProjects = [
   {
     type: 'NFT',
+    promoted: false,
+    featured: false,
+    popular: true,
+    date_added: '2022-01-01',
     title: 'Red Bull',
     description:
       "Red Bull Racing Honda today confirms a new multi-year technical partnership with Tezos, the world's most advanced blockchain, as the Team's Official Blockchain Partner.",
@@ -14,10 +40,14 @@ const tezosProjects = [
   },
   {
     type: 'DEFI',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'lugh',
     description:
       "Lugh's commitment is to provide a transparent, secured and stable digital asset : 1 EURL is always equal to 1 Euro. For this purpose, PwC issues a report on the number of EURL tokens issued and the balance of the associated bank account at Societe Generale. By CoinhouseHQ, Groupe_Casino & Nomdaic Labs",
-    website_link: 'https://tezosprojects.com/http://www.lugh.io/',
+    website_link: 'http://www.lugh.io/',
     social_link: 'https://twitter.com/LabosNomades/status/1372231026777464835?s=20',
     misc_link:
       'https://xtz.news/latest-tezos-news/getting-started-as-an-nft-artist-on-tezos-using-hicetnunc/',
@@ -26,6 +56,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: true,
+    featured: true,
+    popular: true,
+    date_added: '2022-01-01',
     title: 'Kolibri',
     description:
       'Kolibri is an upcoming DeFi application that will enable any tez holder on the Tezos network to mint a stablecoin, kUSD, that is backed by the tez they hold. kUSD is pegged 1:1 to the US dollar, is backed by tez and secured by the Harbinger price oracle.',
@@ -37,10 +71,14 @@ const tezosProjects = [
   },
   {
     type: 'NFT',
+    promoted: true,
+    featured: true,
+    popular: true,
+    date_added: '2022-01-01',
     title: 'hicetnunc',
     description:
       'Are you an NFT artist looking to get started on Tezos in order to mint clean NFTs for low fees? Enter the Tezos NFT ecosystem through Hicetnunc.',
-    website_link: 'https://www.hicetnunc.xyz/',
+    website_link: 'https://www.hicetnunc.art/',
     social_link: 'https://twitter.com/TezosFinance',
     misc_link: 'https://medium.com/madfish-solutions',
     telegram_link: 'https://t.me/oropocket',
@@ -48,6 +86,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezfin',
     description:
       "Tezos Finance (aka 'Tezfin')-launching early-2021-is the first decentralized on-chain lending platform (conceptually akin to Compound or Aave) that will operate on Tezos blockchain.",
@@ -59,6 +101,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Quipuswap',
     description:
       'Quipuswap - the protocol that aims to provide an easy interface for a decentralized token exchange on Tezos blockchain.',
@@ -70,6 +116,10 @@ const tezosProjects = [
   },
   {
     type: 'DAO',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Homebase',
     description:
       'Homebase will enable anyone to create and interact with DAOs on Tezos based on a new smart contracts framework called BaseDAO (TreasuryDAO and RegistryDAO).',
@@ -81,6 +131,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Smartlink',
     description:
       'Smartlink introduces Trust-as-a-Service, providing a decentralized escrow payment system for Web 3.0. enabling users to buy and sell products and services using cryptocurrencies.',
@@ -92,6 +146,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Wrap Protocol',
     description:
       'Wrap Protocol, which functions as a bridge between Ethereum and Tezos and allows users to migrate their ERC20 tokens to FA1.2 tokens - an innovation that they hope will increase the volume and variety of assets on the protocol.',
@@ -103,6 +161,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Wakam',
     description:
       'Wakam expanded its involvement in the Tezos ecosystem and blockchain by becoming a corporate baker. As a baker, Wakam validates transactions (blocks) and adds them to the Tezos blockchain.',
@@ -114,6 +176,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'wXTZ',
     description:
       'Wrapped Tezos (wXTZ) is a fully collateralized representation of XTZ conforming to the FA1.2 token standard - a collateralized staking position that unlocks the power of DeFi.',
@@ -125,6 +191,10 @@ const tezosProjects = [
   },
   {
     type: 'Corporate Baker',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'exaion',
     description:
       'Exaion, a subsidiary of the French multinational electric utility company EDF Group, will join the Tezos ecosystem as a corporate baker. The company aims to utilize distributed ledger technology to develop solutions to minimize the carbon footprint of its business and its customers.',
@@ -136,6 +206,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Societe General',
     description:
       'For a digital euro, the Bank of France had selected Societe Generale - Forge as part of its call for applications to experiment with the use of Central Bank Digital Currency. The experiment will explore the feasibility of financial securities being digitally settled and delivered in CBDC.',
@@ -148,6 +222,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'ETHtez',
     description:
       'ETHtez (ETHtz) is Wrapped ETH on Tezos for trading on Tezos DeFi marketplaces. Users can transact ETH without the gas fees of the Ethereum network. ETHtez projects are backed by full and transparent reserve of ETH.',
@@ -159,6 +237,10 @@ const tezosProjects = [
   },
   {
     type: 'Corporate Baker',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Sword Group',
     description:
       'Sword Blockchain Director comments "We are convinced that crypto-assets and particularly security tokens will have a major role to play in tomorrow\'s banking ecosystem. Becoming a corporate baker on Tezos is evidence of that conviction and represents a further step towards blockchain Community."',
@@ -171,6 +253,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'OroPocket',
     description:
       "As a pioneering fintech platform in the DeFi space, Oropocket has launched India's first gold or silver-based token on the Tezos blockchain protocol.",
@@ -183,6 +269,10 @@ const tezosProjects = [
   {
     // review this category
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'RADION FM',
     description:
       'Now talented musicians from all over the world will be able to upload their music and receive payment directly to their crypto wallets for every single download they have. A pure peer to peer experience thanks to blockchain technology.',
@@ -194,6 +284,10 @@ const tezosProjects = [
   },
   {
     type: 'stablecoin',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'StableTez',
     description:
       'StableTez is bringing stablecoins to Tezos, having deployed tokens such as USDtez (USDtz) and ETHtez (ETHtz), for stable, scalable, and DApp-programmable liquidity.',
@@ -205,6 +299,10 @@ const tezosProjects = [
   },
   {
     type: 'nft',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'CricTez',
     description:
       'CricTez is a non-fungible token-based fantasy sports dapp, primarily focused on cricket (refer to the last section for more info on cricket). The core idea of dapp revolves around the representation of players/athletes as Non-Fungible Tokens(NFTs).',
@@ -217,6 +315,10 @@ const tezosProjects = [
   {
     // review this category
     type: 'Exchanges (DEX)',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Kalamint | SEXP',
     description: 'SEXP is a decentralized exchange for trading synthetic assets built on Tezos.',
     website_link: 'https://kalamint.io/',
@@ -227,6 +329,10 @@ const tezosProjects = [
   },
   {
     type: 'nft',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Kalamint',
     description: 'Kalamint is the first community-owned NFT marketplace on Tezos.',
     website_link: 'https://tezosprojects.com/http://www.werenode.com/',
@@ -237,6 +343,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Werenode',
     description:
       'An Electric Vehicle Charging Solution Built On Tezos, With Links To Renault, Nissan & Mitsubishi',
@@ -248,6 +358,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Harbinger',
     description:
       "Harbinger is a project that delivers signed price feeds based on real time market data from multiple exchanges. The on-chain data will be fed directly to the Tezos network making it 'DeFi ready' for future applications.",
@@ -259,6 +373,10 @@ const tezosProjects = [
   },
   {
     type: 'stablecoin',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'tzBTC',
     description:
       'tzBTC brings the liquidity and battle-tested brand of Bitcoin (BTC) into the Tezos ecosystem, enabling BTC-backed use-cases on Tezos. Developers on Tezos can use tzBTC to enable novel financial applications on the Tezos blockchain.',
@@ -270,6 +388,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'DAOBaker',
     description:
       "Yield Baker is an Automated Liquidity Protocol with a rebalancer instrument for tokenized staked assets on Tezos (dXTZ, SLOT). It's a smart-contract driven protocol that allows users to deposit their staked XTZ (dXTZ) to earn a yield up to 25% APY by providing liquidity for SLOTs.",
@@ -281,6 +403,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Dexter',
     description:
       'Dexter is a decentralized exchange on the Tezos blockchain and a web frontend that allows users to swap Tezos tokens and provide liquidity to the exchange. The frontend is open source and hosted on IPFS.',
@@ -293,6 +419,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Envited',
     description:
       'Work group for virtual proof of validation of Autonomous Driving functions. Workgroup members include automotive manufacturers such as Audi, BMW, Daimler and Porsche.',
@@ -304,6 +434,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Reward Distributor',
     description: 'TRDis a software for distributing staking rewards of delegators',
     website_link: 'https://www.linkedin.com/feed/update/urn:li:activity:6602832520033763328',
@@ -314,6 +448,10 @@ const tezosProjects = [
   },
   {
     type: 'Identity',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Decentralized Identity',
     description:
       'We are proud to announce our collaboration with the Tezos ecosystem, with which we have begun working to add decentralized identity capabilities built using the latest W3C standards.',
@@ -325,6 +463,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Gendarmerie Nationale',
     description:
       'The National Gendarmerie (Center for Combating Cybercrime) has implemented the first "smart contract" in the world coded by a government authority. This smart contract is coded on the Tezos blockchain.',
@@ -336,6 +478,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Kiln',
     description: 'Kiln is a tool for baking and monitoring on the Tezos network.',
     website_link: 'https://arxiv.org/abs/2001.11965',
@@ -345,6 +491,10 @@ const tezosProjects = [
   },
   {
     type: 'community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Agora',
     description:
       'A place to monitor, discuss and learn about the long-term direction of the Tezos project.',
@@ -356,6 +506,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Tenderbake',
   //   description: 'Tenderbake -- Classical BFT Style Consensus for Public Blockchains',
   //   website_link: 'https://www.equisafe.io/',
@@ -365,6 +517,10 @@ const tezosProjects = [
   // },
   {
     type: 'corporate baker',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'BTG',
     description:
       'Banco BTG Pactual S.A. (BTG Pactual), the largest investment bank in Latin America, plans to conduct a deal pipeline of over $1 bn security token offerings (STO) onto the Tezos blockchain.',
@@ -375,6 +531,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Equisafe',
     description:
       'Equisafe is building an all-in-one Digital Investment Banking Infrastructure with the mission to make accessible investment opportunities at scale.',
@@ -385,6 +545,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'defi',
+  // promoted: false,
+  // featured: false,
   //   title: 'Spark',
   //   description:
   //     'Spark is a deflationary token, starting with an initial supply of 1,000,000 Spraks and these tokens will be burnt at a rate of 2% per transaction until they completely deplete.',
@@ -395,6 +557,10 @@ const tezosProjects = [
   // },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Link',
     description:
       'Your gateway to the tezos network Free and scalable API access to the Tezos network and usage analytics for your projects',
@@ -406,6 +572,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Giga Node',
     description:
       'We built a reliable, secure, fault-tolerant, robust and geographically distributed infrastructure that capable of processing most of the day-to-day operations on the Tezos network including the peak times at the beginning of each cycle.',
@@ -417,6 +587,10 @@ const tezosProjects = [
   {
     // review this category
     type: 'real-estate',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Alliance Investments',
     description:
       "Alliance Investments intends to tokenize at least $25 million of the value of River Plaza. The River Plaza STO will be digitized using tZERO's tokenization technology and Megalodon's advisory services and issued on the Tezos Blockchain.",
@@ -429,6 +603,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Stackexchange',
     description: 'The Stackexchange for Tezos. All technical / development questions go in here.',
     website_link: 'https://tezosprojects.com/http://www.elevatedreturns.com',
@@ -439,6 +617,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'NYX Standard',
     description:
       'A set of digital contracts standards, designed for issuers and buyers of financial instruments, to be used on the Tezos blockchain.',
@@ -449,6 +631,10 @@ const tezosProjects = [
   },
   {
     type: 'real-estate',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Elevated Returns',
     description:
       'Token-focused financial group Elevated Returns will tokenize real-estate offerings on the Tezos blockchain. Elevated Returns has over $1 billion worth of real assets for future tokenization.',
@@ -459,6 +645,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Nautilus Cloud',
     description: 'A full suite of tools to develop and deploy Tezos applications',
     website_link: 'https://mininax.cryptonomic.tech/',
@@ -468,6 +658,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Vertalo',
     description:
       'Transfer Agent Vertalo issues digital securities and manages data for the broker-dealers, issuers, custodians and exchanges. The company has chosen Tezos for Security Token Development.',
@@ -478,6 +672,10 @@ const tezosProjects = [
   },
   {
     type: 'Identity',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Profiles',
     description:
       'Tezos Profiles enables you to associate your online identity with your Tezos account.',
@@ -487,6 +685,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Arronax',
     description: 'Interactive block explorer for Tezos built around Conseil.',
     website_link: 'https://github.com/keefertaylor/TezosKit',
@@ -496,6 +698,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Checker',
     description:
       'A tokenized fund by Andra Capital focused on private, late-stage technology investments built on the Tezos Blockchain.',
@@ -506,6 +712,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezosKit',
     description:
       'Swift SDK for Tezos and Tezos based apps on Apple platforms, including iOS, MacOS, iPadOS',
@@ -517,6 +727,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Checker',
     description:
       'Checker is a software project implementing financial logic designed to help stabilize the value of a cryptographic coin with respect to an externally provided index by Arthur Breitman (Founder of Tezos).',
@@ -527,6 +741,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TzKt',
     description: 'Tezos Blockchain explorer. Developed by Baking Bad.',
     website_link: 'https://token.im/',
@@ -536,6 +754,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Israel',
     description:
       'Tezos Israel is an innovation lab that serves the Israeli community in educating and training developers while building advanced blockchain technologies for the Tezos ecosystem.',
@@ -546,6 +768,10 @@ const tezosProjects = [
   },
   {
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'imToken',
     description: "One of China's largest mobile wallet, integrated Tezos and is an active baker.",
     website_link: 'https://gitlab.com/morley-framework/morley',
@@ -555,6 +781,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Granary Toolkit',
     description:
       'Cortez is a mobile wallet for the Tezos blockchain, currently only on Android. Developed by Nomadic Labs.',
@@ -565,6 +795,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Morley',
     description: 'Developer tools for the Michelson Language',
     website_link: 'https://tezos.org.ua/',
@@ -574,6 +808,10 @@ const tezosProjects = [
   },
   {
     type: 'Identity',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezID',
     description: 'Tezos smart contract & dapp development toolkit',
     website_link: 'https://tezid.net/',
@@ -582,6 +820,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Ukraine',
     description:
       'Tezos Ukraine is a non-profit organization run by Ukrainian blockchain enthusiasts and industry experts.',
@@ -592,6 +834,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tulip Tools',
     description: 'Develoment team working on tools for Tezos.',
     website_link: 'https://protofire.io/',
@@ -602,6 +848,10 @@ const tezosProjects = [
   },
   {
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Kukai',
     description:
       'A web based wallet for Tezos. Kukai can be run in the browser at kukai.app or as a standalone app.',
@@ -612,6 +862,10 @@ const tezosProjects = [
   },
   {
     type: 'dev',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Protofire',
     description:
       'A blockchain and smart contracts development team creating a DeFi Developer Experience on Tezos.',
@@ -622,6 +876,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'wallet',
+  // promoted: false,
+  // featured: false,
   //   title: 'Kukai Wallet',
   //   description:
   //     'A web based wallet for Tezos. Kukai can be run in the browser at kukai.app or as a standalone app.',
@@ -631,6 +887,10 @@ const tezosProjects = [
   // },
   {
     type: 'Exchanges (DEX)',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezex',
     description:
       'Non-profit organization aiming to promote new usage of technology for democracy and voting. Will organize a cross-university electoral vote in 2020 using a Tezos-based application',
@@ -640,6 +900,10 @@ const tezosProjects = [
   },
   {
     type: 'tool',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezBridge',
     description:
       'TezBridge is a connector between Tezos and DApps. It works on both desktop and mobile devices.',
@@ -649,6 +913,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Misualizer',
     description:
       'The michelson Visualizer - A tool to visualize all possible behaviors and trace all internal transactions in Tezos smart contracts.',
@@ -658,6 +926,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'eztz',
     description:
       'Tezos JS Library compatible with the Tezos blockchain, implementing communication with the JSON RPC API and providing key generation, signing, verification, and contract interaction.',
@@ -667,6 +939,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Go Tezos',
     description: 'Go Tezos Is a Go library that exposes and builds upon the Tezos RPC.',
     website_link: 'https://baking-bad.org/docs',
@@ -675,6 +951,10 @@ const tezosProjects = [
   },
   {
     type: 'dev',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'ECAD Labs',
     description:
       'ECAD Labs Inc. is a software & services consultancy that delivers and manages projects in the areas of software development, systems engineering, open source development and support, primarily on top of the Tezos blockchain.',
@@ -684,6 +964,10 @@ const tezosProjects = [
   },
   {
     type: 'dev',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Baking Bad',
     description:
       'Baking Bad is a team of developers, crypto-enthusiasts and friends involved in the blockchain world since 2017 and lately most time in Tezos.',
@@ -693,6 +977,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Stakepool',
     description:
       'A no loss, price prediction experiment which let you predict the price of Tezos and winners get staking rewards of losers.',
@@ -702,6 +990,10 @@ const tezosProjects = [
   },
   {
     type: 'corporate baker',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Sygnum',
     description:
       "Sygnum Bank is the first regulated bank to offer the purchase, custody, trading, credit and staking services for the Tezos blockchain's native XTZ token. Sygnum clients can now stake their XTZ directly with Sygnum Bank and immediately start earning staking rewards of up to 5 percent annually.",
@@ -711,6 +1003,10 @@ const tezosProjects = [
   },
   {
     type: 'education',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Academy',
     description:
       'Learn to code Tezos Smart Contracts the easy way! Tezos academy is a fun interactive tutorial to the LIGO language.',
@@ -720,6 +1016,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Cryptonomic',
     description:
       'Cryptonomic is an NYC-based company committed to decentralization and digital sovereignty building several projects for Tezos.',
@@ -729,6 +1029,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Finance',
     description: 'Innovating the new TzFi ecosystem, through good design and advanced mathematics',
     website_link: 'https://boltlabs.tech/team',
@@ -737,6 +1041,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'organisation',
+  // promoted: false,
+  // featured: false,
   //   title: 'Coinbase Custody',
   //   description:
   //     'The launch of Tezos staking through Coinbase Custody serves an acute need that existed up until now: a way for institutional participants who rely on a secure, offline custodian to take an active role in the network.',
@@ -746,6 +1052,10 @@ const tezosProjects = [
   // },
   {
     type: 'Insurance',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezsure',
     description:
       'Tezsure is a platform to provide personalized insurance solutions to our users in a simplified way so that they can leverage the features of Blockchain and can function in a community driven insurance pool without involvment of any third party.',
@@ -755,6 +1065,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'dapp',
+  // promoted: false,
+  // featured: false,
   //   title: 'zkChannels',
   //   description:
   //     'zkChannels is a Layer-2 protocol that enables anonymous and scalable payments based on commitments, blind signatures and efficient zero-knowledge proofs. With zkChannels, off-chain transactions are inherently unlinkable, efficient, and applicable to payments and state channels.',
@@ -764,6 +1076,10 @@ const tezosProjects = [
   // },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'BlockFi',
     description:
       'BlockFi partnered with Elevated Returns, an asset management and tokanization firm that tokenizes assets on the Tezos blockchain. With the partnership, they announced to enable lending with digital assets tokenized by Elevated Returns as collateral.',
@@ -773,6 +1089,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'wallet',
+  // promoted: false,
+  // featured: false,
   //   title: 'Sylo',
   //   description:
   //     'New Zealand-based software development firm Sylo has deployed wallet support for public blockchain Tezos in their multi-chain wallet-messenger decentralized app',
@@ -782,6 +1100,10 @@ const tezosProjects = [
   // },
   {
     type: 'developer',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'IMDEA',
     description:
       'The iMdea Software contributes to the core development of Tezos. iMdea has signed a collaboration agreement with the Tezos Foundation and Nomadic Labs.',
@@ -792,6 +1114,10 @@ const tezosProjects = [
   {
     // redo this its outdated
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Thanos Wallet',
     description:
       "Cryptocurrency wallet for the Tezos blockchain as Web Extension for your Browser, similar to Ethereum's Metamask.",
@@ -801,6 +1127,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Blockchair',
     description:
       'Tezos explorer and API: Some things that make us stand out are that we provide the explorer in currently 7 languages, that we are fully private and also provide the explorer on the Tor network.',
@@ -810,6 +1140,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'USDtez',
     description:
       'USDtez (USDtz) is the first USD-pegged stablecoin and first FIAT-pegged stablecoin on Tezos. It is backed 1-1 with FIAT, keeping full and transparent reserves and enabling a secure, scalable, and [financial instrument] programmable source of liquidity.',
@@ -819,6 +1153,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TEZEX',
     description:
       'Direct market transactions 1-1 between liquidity favorites like USDT to USDtz. or USDC to USDtz, BTC to BTCtz, and ETH to ETHtz',
@@ -828,6 +1166,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Netezos',
     description:
       'Netezos.Rpc provides an access to the Tezos node via RPC API. There is the main class TezosRpc which you need to build queries, supported by the Tezos RPC API.',
@@ -837,6 +1179,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Stably',
     description:
       'We are proud to announce our collaboration with the Tezos ecosystem, which will begin with bringing our USD-backed stablecoin, USDS, to Tezos.',
@@ -846,6 +1192,10 @@ const tezosProjects = [
   },
   {
     type: 'gaming',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Coase',
     description:
       'A digital collectible card game which uses a blockchain-powered marketplace by Kathleen Breitman (Co-Founder of Tezos).',
@@ -855,6 +1205,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Pocket Network',
     description:
       'The mission of Pocket Network is to connect any app, to any blockchain, on any device by providing a decentralized and trustless API layer for applications to interface with directly.',
@@ -864,6 +1218,10 @@ const tezosProjects = [
   },
   {
     type: 'Community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Gulf',
     description:
       "Based in Dubai, Tezos Gulf Technologies' mission is to support the growth of the Tezos ecosystem in the Middle East.",
@@ -873,6 +1231,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Baker Leaderboard',
     description:
       "Bakers leaderboard of all available bakeries, not only promoted or enterprise level as it's common on most resources tools (>600)",
@@ -882,6 +1244,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Reward Calculator',
     description: 'Staking reward calculator for stake.fish, a Tezos baking service.',
     website_link: 'https://github.com/TezosRio/TezzeT',
@@ -890,6 +1256,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos TAPS',
     description:
       'TAPS software (acronym for Tezos Automatic Paying System), a system created to allow bakers to automate their rewards distribution to their delegators',
@@ -899,6 +1269,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezosJ_SDK',
     description:
       'The TezosJ SDK library enables Android Java developers to create apps that communicates with Tezos blockchain.',
@@ -908,6 +1282,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezosJ_SDK_plainJava',
     description:
       'A Java SDK for Tezos node interactions with Conseil support. The TezosJ SDK library enables plain Java developers to create applications that communicates with Tezos blockchain.',
@@ -917,6 +1295,10 @@ const tezosProjects = [
   },
   {
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezzeT Wallet',
     description:
       'TEZZET is a fast, lightweight, secure and efficient Android Mobile Tezos Wallet. It is written in Java language, and uses our TezosJ_SDK library.',
@@ -926,6 +1308,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Taquito',
     description:
       'Taquito is a TypeScript library suite that can be used to build dApps or traditional web applications on top of the Tezos blockchain. Made available as a set of npm packages, Taquito aims to make building on top of Tezos easier and more enjoyable.',
@@ -935,6 +1321,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'PyTezos',
     description:
       'PyTezos library is a Python toolset for Tezos blockchain, including work with keys, signatures, contracts, operations, RPC query builder, and a high-level interface for smart contract interaction.',
@@ -944,6 +1334,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Notifier',
     description:
       'Tezos Notifier Bot notifies users about transactions and other events in the Tezos blockchain.',
@@ -953,6 +1347,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'decet',
     description:
       'Decet is a software studio and research firm that provides new solutions for age old problems. We create digital technologies for established and seasoned industries, including the agricultural, financial and transportation markets.',
@@ -962,6 +1360,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Baking Bad Baking Auditor',
     description: 'baking-bad.org is an independent service auditing Tezos bakers.',
     website_link: 'https://nomadic-labs.com/',
@@ -970,6 +1372,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tzstats',
     description:
       'A modern block explorer with advanced analytics for the Tezos blockchain providing insights into on-chain activity, staking, health, growth and governance.',
@@ -988,6 +1394,10 @@ const tezosProjects = [
   // },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Better Call Dev',
     description:
       "We are happy to present an alpha version of our explorer for smart contracts! It's written in js, operates entirely on client side, and utilizes TzScan API and Tezos node RPC.",
@@ -997,6 +1407,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 009 Flo',
   //   description:
   //     'The Florence proposal (from Nomadic Labs, Marigold, DaiLambda, and Tarides) is a protocol upgrade focused on implementing improvements such as increasing maximum operation size, gas optimizations, depth first execution order, and the elimination of the test chain activation.',
@@ -1005,6 +1417,8 @@ const tezosProjects = [
   // },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 008 Edo',
   //   description:
   //     'The proposal contains improvements to performance and gas costs, the addition of a so-called "Community period" to the voting schedule, and two important new features that we have been working on for some time: Sapling (shielded tx), and Tickets.',
@@ -1013,6 +1427,8 @@ const tezosProjects = [
   // },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 007 Delphi',
   //   description:
   //     'Delphi makes substantial improvements to the performance of the Michelson interpreter and to the gas model, and thus dramatically improves gas costs on the Tezos blockchain.',
@@ -1021,6 +1437,8 @@ const tezosProjects = [
   // },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 006 Carth.',
   //   description:
   //     'Increase the gas limit per block and per operation by 30%, improve the accuracy and resiliency of the formula used for calculating baking and endorsing rewards and fix various small issues',
@@ -1029,6 +1447,8 @@ const tezosProjects = [
   // },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 005 Babylon',
   //   description:
   //     'Includes Emmy+, delegatable tz1 addresses, Michelson upgrades to improve compilation from high-level languages, hardened governance mechanisms, and more. Fixes a bug affecting big maps in smart contracts and a minor regression affecting the trace_code RPC.',
@@ -1037,6 +1457,8 @@ const tezosProjects = [
   // },
   // {
   //   type: 'protocol',
+  // promoted: false,
+  // featured: false,
   //   title: 'Protocol Upgrade - 004 Athen',
   //   description:
   //     'Athens A proposes two incremental changes: Increase the gas limit by doubling the number of computation steps which can be included in each block.Reduce roll size from 10,000 tez to 8,000 tez',
@@ -1045,6 +1467,10 @@ const tezosProjects = [
   // },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Smart Contract Labs',
     description:
       'Smart Contract Labs builds blockchain products on modern Proof-of-Stake platforms, like Tezos.',
@@ -1053,6 +1479,10 @@ const tezosProjects = [
   },
   {
     type: 'Community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Japan',
     description: 'Expand and empower the Tezos community in Japan.',
     website_link: 'https://tezosprojects.com/www.michelson-lang.com',
@@ -1060,6 +1490,10 @@ const tezosProjects = [
   },
   {
     type: 'Community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos India Foundation',
     description: 'Dedicated to Growing the Tezos Community in India.',
     website_link: 'https://smartpy.io/',
@@ -1067,6 +1501,10 @@ const tezosProjects = [
   },
   {
     type: 'community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Southeast Asia',
     description:
       'Independent non-profit association run and fully led by locals from Singapore, complemented by established industry veterans who provide strategic advice and oversight.',
@@ -1075,6 +1513,10 @@ const tezosProjects = [
   },
   {
     type: 'education',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Capstone',
     description:
       'Start your path as a Tezos blockchain developer: Tezos Capstone is a new initiative focused on introducing more developers into the Tezos ecosystem. Developers learn core blockchain and Tezos concepts, and practical dApp development experience.',
@@ -1083,6 +1525,10 @@ const tezosProjects = [
   },
   {
     type: 'education',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Zastrin',
     description:
       'Build a simple Dapp on Tezos [VIDEO COURSE]: In this course, you will learn the basic concepts of Tezos, tools and libraries in the Tezos ecosystem and build a fully decentralized application on the Tezos platform. You will learn the Liquidity programming language and implement a smart contract.',
@@ -1091,6 +1537,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'The Michelson Language',
     description:
       'Michelson is the domain-specific language used to write smart contracts on the Tezos blockchain.',
@@ -1099,6 +1549,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'SMARTPY',
     description:
       'An intuitive and effective smart contracts language and development platform for Tezos. In Python.',
@@ -1107,6 +1561,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'fi',
     description:
       'fi (pronounced fee) is a high-level language for Michelson, allowing programmers to easily develop on Tezos.',
@@ -1115,6 +1573,10 @@ const tezosProjects = [
   },
   {
     type: 'tools',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'LIGO',
     description: 'a new smart contract language for Tezos',
     website_link: 'https://tezosprojects.com/\nhttps://airgap.it/',
@@ -1122,6 +1584,10 @@ const tezosProjects = [
   },
   {
     type: 'education',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TOMI',
     description:
       'Tezos OCaml Michelson Institute (TOMI) - a Tezos research and education foundation dedicated to the growth and advancement of the Tezos developer community.',
@@ -1130,6 +1596,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'tools',
+  // promoted: false,
+  // featured: false,
   //   title: 'Conseil by Cryptonomic',
   //   description:
   //     'A high-performance chain indexer. Conseil is the infrastructure for dApps that go beyond block explorers offering advanced query functionality including arbitrary filtering and aggregation.',
@@ -1139,6 +1607,10 @@ const tezosProjects = [
   {
     // review this
     type: 'Developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'ConseilJS by Cryptonomic',
     description:
       'A full-fledge dApp development framework in TypeScript. This library can be used for React and web development. It contains a broad range of functionality, from the an interface to the Conseil indexing service to Tezos node interactions, and hardware wallet support.',
@@ -1147,6 +1619,10 @@ const tezosProjects = [
   },
   {
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Galleon',
     description:
       'Galleon is a deployment of Tezori, an open source wallet framework for Tezos, supporting both software and hardware wallets in eight languages on Mac, Windows, and Linux.',
@@ -1155,6 +1631,10 @@ const tezosProjects = [
   },
   {
     type: 'Gaming',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TezDice',
     description:
       'The first and only gambling website that supports Tezos. Join us for endless rewards possibilities!',
@@ -1163,6 +1643,10 @@ const tezosProjects = [
   },
   {
     type: 'wallet',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'AirGap',
     description:
       'A secure crypto wallet and grantee from the Tezos Foundation: With AirGap your old smartphone is your new hardware wallet. Secure your various crypto assets with one secret on an offline device.',
@@ -1171,6 +1655,10 @@ const tezosProjects = [
   },
   {
     type: 'Exchanges (DEX)',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Sustain Exchange',
     description:
       'SUSTAIN.EXCHANGE plans to develop and enhance its Tezos baking infrastructure. However, it was also stated that their work would also include the development of a primary issuance platform for Tezos digital securities: "which will enable a pipeline of asset tokenizations on Tezos in the region"',
@@ -1179,6 +1667,8 @@ const tezosProjects = [
   },
   // {
   //   type: 'dapp',
+  // promoted: false,
+  // featured: false,
   //   title: 'Baanx',
   //   description:
   //     'Baanx to bring its entire Fintech product suite to Tezos in Q1 2021 - debit cards, digital wallets, IBANs, remittance/FX, payment gateways and more.',
@@ -1187,6 +1677,10 @@ const tezosProjects = [
   // },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'CHORUS mobility',
     description:
       'Research and Development company working on Blockchain solutions for the future of transportation.',
@@ -1195,6 +1689,10 @@ const tezosProjects = [
   },
   {
     type: 'education',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'B9lab',
     description:
       'We are excited to work with the Tezos Foundation to bring high-quality education and training to the Tezos community and beyond. Courses in development include a free introductory Tezos 101 course as well as a paid Tezos Developer course.',
@@ -1203,6 +1701,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'CLAUSE',
     description:
       'Connected Contracting: Integrate your contracts with your software tools for smarter management.',
@@ -1211,6 +1713,10 @@ const tezosProjects = [
   },
   {
     type: 'defi',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'QR Capital - DEX',
     description:
       'QR Capital is Brazil\'s largest crypto hedge fund, and this week, QR Capital announced that they are building a digital exchange on the Tezos blockchain: the "Brazilian Legal Receivables and Precatory Bonds Exchange" (BBPR).',
@@ -1219,6 +1725,10 @@ const tezosProjects = [
   },
   {
     type: 'dapp',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'LegiCash',
     description:
       'We are a blockchain technology that uses formal methods to increase the scalability and security of smart contracts.Our product will make cryptocurrency payments as easy, fast, and reliable as using a debit card.',
@@ -1226,6 +1736,10 @@ const tezosProjects = [
   },
   {
     type: 'Community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Foundation',
     description:
       'The Tezos Foundation stands as part of the community in support of the Tezos protocol and ecosystem. Goal: 1,000 New Tezos Developers in 2019',
@@ -1233,6 +1747,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Commons Foundation',
     description:
       'The mission of Tezos Commons Foundation is to foster the growth of the global Tezos ecosystem through the identification, funding and execution of projects that drive community growth, awareness and success.',
@@ -1240,6 +1758,10 @@ const tezosProjects = [
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Nomadic Labs',
     description:
       'We research and develop products and services in various domains of computer science, namely distributed, decentralized, and formally verified systems.',
@@ -1247,17 +1769,67 @@ const tezosProjects = [
   },
   {
     type: 'Community',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'Tezos Korea',
     description: 'Expand and empower the Tezos community in Korea',
     img: 'https://tezosprojects.com/img/Tezos%20Korea.jpg',
   },
   {
     type: 'developers',
+    promoted: false,
+    featured: false,
+    popular: false,
+    date_added: '2022-01-01',
     title: 'TQ Tezos',
     description:
       'The Tocqueville Group (TQ) works to advance the Tezos ecosystem by creating open source software and other public goods, providing support to projects and companies building on Tezos, and connecting the global Tezos community.',
     img: 'https://tezosprojects.com/img/TQ%20Tezos.jpg',
   },
+];
+
+export interface ProjectData {
+  type?: string;
+  title?: string;
+  description?: string;
+  website_link?: string;
+  social_link?: string;
+  misc_link?: string;
+  telegram_link?: string;
+  img?: string;
+  promoted?: boolean;
+  featured?: boolean;
+  popular?: boolean;
+}
+
+export interface PR {
+  type: string;
+  icon: Icon;
+  projects: ProjectData[];
+}
+
+export const tezProjects = [
+  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
+  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
+  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
+  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
+  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
+  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
+  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
+  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
+  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
+  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
+  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
+  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
+  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
+  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
+  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
+  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
+  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
+  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
+  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
 ];
 
 export default tezosProjects;

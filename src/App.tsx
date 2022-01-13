@@ -1,24 +1,11 @@
-import { Container } from '@mui/material';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import BottomNav from './BottomNav/bottomNav';
 import InfoBanner from './BottomNav/infoBanner';
-import Categories from './Categories/categories';
 import Ecosystem from './Ecosystem/ecosystem';
-import Header from './Header/Header';
+import { Home } from './Home/Home';
 import Navbar from './Nav/Nav';
 import Project from './Project/project';
-import ProjectList from './ProjectList/ProjectList';
-
-const Home = () => (
-  <Container>
-    <Header />
-    <ProjectList title="Promoted Products" CTA="Promote now" />
-    <Categories title="Categories" />
-    <ProjectList title="Popular Products" />
-    <ProjectList title="Recently Added" CTA="Show all" />
-  </Container>
-);
 
 function App() {
   return (

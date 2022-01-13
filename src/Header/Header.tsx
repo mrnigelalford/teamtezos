@@ -32,7 +32,7 @@ const FeatureText = () => (
   </div>
 );
 
-const mockData = {
+const headerText = {
   title: 'Explore the Tezos Ecosystem',
   description:
     'Our mission is to make information more accessible by providing an overview of all projects and dApps building on Tezos.',
@@ -51,7 +51,7 @@ export default function Header() {
       <Grid container spacing={2}>
         <Grid item xs={12} md={7}>
           <Typography style={{ textAlign: 'left' }} variant="h4" gutterBottom component="div">
-            {mockData.title}
+            {headerText.title}
           </Typography>
           <Typography
             style={{ textAlign: 'left', marginBottom: '.5em', marginTop: '.5em' }}
@@ -59,7 +59,7 @@ export default function Header() {
             gutterBottom
             component="div"
           >
-            {mockData.description}
+            {headerText.description}
           </Typography>
           <div style={{ marginTop: '1.5em', display: 'flex' }}>
             <Button variant="outlined">Explore all projects</Button>

@@ -2,8 +2,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { tezProjects } from '../Ecosystem/ecosystem';
 import { Item } from '../Categories/categories';
+import { tezProjects } from '../Data/data';
 
 interface Props {
   title: string;
