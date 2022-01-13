@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Link, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -46,6 +47,8 @@ export const FeatureBox = () => (
 );
 
 export default function Header() {
+  let navigate = useNavigate();
+
   return (
     <Box style={{ marginTop: '2em' }} sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
@@ -62,7 +65,9 @@ export default function Header() {
             {headerText.description}
           </Typography>
           <div style={{ marginTop: '1.5em', display: 'flex' }}>
-            <Button variant="outlined">Explore all projects</Button>
+            <Button variant="outlined" onClick={() => navigate('/ecosystem')}>
+              Explore all projects
+            </Button>
             <Button variant="text" sx={{ marginLeft: '5em' }}>
               Tezos Ecosystem
             </Button>

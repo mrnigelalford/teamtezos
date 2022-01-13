@@ -1,17 +1,17 @@
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Container, Grid, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
-import { useParams } from 'react-router-dom';
-import { mockCollection } from '../Data/mockData';
+import { useNavigate, useParams } from 'react-router-dom';
+import tezosProjects, { ProjectData } from '../Data/data';
+import { logo } from '../Header/Header';
 import ProjectList from '../ProjectList/ProjectList';
 import ProjectBody from './projectBody';
 
-export default function Project() {
+export default function Project(props: ProjectData) {
   const { id } = useParams();
-  const project = mockCollection.filter((data) => data.id === id)[0];
+  const project = tezosProjects.filter((p) => p.title === id)[0];
+  let navigate = useNavigate();
 
-  const PromotedProject = () => (
+  const PromotedProject = (promotedProject: ProjectData) => (
     <Grid
       sm={4}
       sx={{
@@ -28,17 +28,17 @@ export default function Project() {
 
       <Box sx={{ marginLeft: 'auto', display: 'inline-flex' }}>
         <img
-          src={project.collectionImg}
+          src={promotedProject.img || logo}
           className="logo"
           alt="logo"
           style={{ maxHeight: '2em', opacity: 0.3 }}
         />
         <Box style={{ marginLeft: '1em', textAlign: 'left' }}>
           <Typography style={{ color: 'darkslategrey' }} variant="body1" component="div">
-            {project.title}
+            {promotedProject.title || 'Project Title'}
           </Typography>
           <Typography sx={{ fontSize: '.5em' }} variant="body1" gutterBottom component="div">
-            {project.description}
+            {promotedProject.description || 'Project Description'}
           </Typography>
         </Box>
       </Box>
@@ -60,6 +60,9 @@ export default function Project() {
     </Box>
   );
 
+  const goToProjectSite = () =>
+    project.website_link ? window.open(project.website_link, '_blank') : navigate('/');
+
   const ProjectHeader = () => (
     <Box
       sx={{
@@ -70,7 +73,7 @@ export default function Project() {
         marginBottom: '3em',
       }}
     >
-      <img src={project.collectionImg} className="logo" alt="logo" style={{ maxWidth: '10em' }} />
+      <img src={project.img} className="logo" alt="logo" style={{ maxWidth: '10em' }} />
       <Box style={{ marginLeft: '1em', textAlign: 'left' }}>
         <Typography style={{ textAlign: 'left' }} variant="h4" gutterBottom component="div">
           {project.title}
@@ -83,7 +86,9 @@ export default function Project() {
         >
           {project.description}
         </Typography>
-        <Button variant="outlined">Go There!</Button>
+        <Button variant="outlined" onClick={() => goToProjectSite()}>
+          Visit Website
+        </Button>
       </Box>
     </Box>
   );

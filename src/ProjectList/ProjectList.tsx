@@ -4,6 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Typography } from '@mui/material';
 import { ProjectData } from '../Data/data';
+import { useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -32,6 +33,7 @@ const TitleBar = (props: Props) => (
 );
 
 export default function ProjectList(props: Props) {
+  let navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1, marginTop: '2em', display: 'flex', flexWrap: 'wrap' }}>
       <TitleBar title={props.title} CTA={props.CTA} />
@@ -39,7 +41,10 @@ export default function ProjectList(props: Props) {
         <Grid container spacing={2}>
           {props.projects?.slice(0, 4).map((project, i) => (
             <Grid item xs={12} sm={3} key={i}>
-              <Item sx={{ display: 'flex', flexWrap: 'wrap' }}>
+              <Item
+                sx={{ display: 'flex', flexWrap: 'wrap' }}
+                onClick={() => navigate(`/project/${project.title}`)}
+              >
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <img src={project?.img} alt="coolLogo" style={{ width: '3em' }} />
                   <Typography

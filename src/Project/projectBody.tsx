@@ -1,7 +1,7 @@
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { ReactChild, ReactFragment, ReactPortal } from 'react';
+import { ProjectData } from '../Data/data';
 
 const mediumGrey = '#f0efef';
 const grey = '#d2d2d2';
@@ -26,12 +26,7 @@ const ProjectInfo = (props: { title: string; subtitle: string }) => (
   </div>
 );
 
-const ProjectBody = (props: {
-  project: {
-    title: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined;
-    fullDescription: boolean | ReactChild | ReactFragment | ReactPortal | null | undefined;
-  };
-}) => (
+const ProjectBody = (props: { project: ProjectData }) => (
   <Grid
     container
     sx={{
@@ -49,7 +44,7 @@ const ProjectBody = (props: {
         About {props.project.title}
       </Typography>
       <Typography style={{ textAlign: 'left' }} variant="body1" gutterBottom component="div">
-        {props.project.fullDescription}
+        {props.project.description}
       </Typography>
     </Grid>
     <Grid
@@ -68,7 +63,10 @@ const ProjectBody = (props: {
             borderRadius: '.3em',
           }}
         >
-          <ProjectInfo title="Type:" subtitle="Row One" />
+          <ProjectInfo
+            title="Type:"
+            subtitle={props.project.type?.replace(/^\w/, (c) => c.toUpperCase()) || 'Project Type'}
+          />
           <ProjectInfo title="Release date:" subtitle="Row Two" />
           <ProjectInfo title="Total Supply:" subtitle="`10000`" />
         </Box>
