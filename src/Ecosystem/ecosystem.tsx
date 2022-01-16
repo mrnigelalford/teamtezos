@@ -3,19 +3,19 @@ import { Item } from '../Categories/categories';
 import { FeatureBox } from '../Header/Header';
 
 import React, { useEffect } from 'react';
-import tezosProjects, { PR, ProjectData, tezProjects } from '../Data/data';
+import tezosProjects, { ProjectData, projectCategories } from '../Data/data';
 
 interface Props {}
 
 export default function Ecosystem(props: Props) {
-  const [projects, setProjects] = React.useState(tezProjects as PR[]);
+  const [projects, setProjects] = React.useState(projectCategories);
 
   useEffect(() => {
     tezosProjects.forEach((project: ProjectData) => {
-      const found = tezProjects.find(
+      const found = projectCategories.find(
         (cat) => cat.type.toLowerCase() === project.type?.toLowerCase()
       );
-      if (found) {
+      if (found && found.projects.filter((p) => p.title === project.title).length === 0) {
         found.projects.push({
           title: project.title,
           description: project.description,
@@ -27,7 +27,7 @@ export default function Ecosystem(props: Props) {
         });
       }
     });
-    setProjects(tezProjects.filter((cat) => cat.projects.length) as PR[]);
+    setProjects(projectCategories.filter((cat) => cat.projects.length));
   }, []);
 
   return (

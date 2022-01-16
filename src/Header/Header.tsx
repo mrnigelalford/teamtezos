@@ -65,12 +65,12 @@ export default function Header() {
             {headerText.description}
           </Typography>
           <div style={{ marginTop: '1.5em', display: 'flex' }}>
-            <Button variant="outlined" onClick={() => navigate('/ecosystem')}>
+            <Button variant="text" onClick={() => navigate('/ecosystem')}>
               Explore all projects
             </Button>
-            <Button variant="text" sx={{ marginLeft: '5em' }}>
+            {/* <Button variant="text" sx={{ marginLeft: '5em' }}>
               Tezos Ecosystem
-            </Button>
+            </Button> */}
           </div>
         </Grid>
         <Grid item xs={12} md={4} sx={{ marginLeft: 'auto', textAlign: 'left' }}>

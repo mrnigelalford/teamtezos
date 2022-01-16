@@ -6,7 +6,7 @@ import { logo } from '../Header/Header';
 import ProjectList from '../ProjectList/ProjectList';
 import ProjectBody from './projectBody';
 
-export default function Project(props: ProjectData) {
+export default function Project() {
   const { id } = useParams();
   const project = tezosProjects.filter((p) => p.title === id)[0];
   let navigate = useNavigate();

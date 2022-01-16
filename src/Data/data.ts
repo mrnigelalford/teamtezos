@@ -18,7 +18,42 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
-import { Icon } from '@fortawesome/fontawesome-svg-core';
+
+export interface ProjectData {
+  type?: string;
+  title?: string;
+  description?: string;
+  website_link?: string;
+  social_link?: string;
+  misc_link?: string;
+  telegram_link?: string;
+  img?: string;
+  promoted?: boolean;
+  featured?: boolean;
+  popular?: boolean;
+}
+
+export const projectCategories = [
+  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
+  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
+  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
+  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
+  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
+  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
+  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
+  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
+  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
+  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
+  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
+  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
+  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
+  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
+  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
+  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
+  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
+  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
+  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
+];
 
 const tezosProjects = [
   {
@@ -1788,48 +1823,6 @@ const tezosProjects = [
       'The Tocqueville Group (TQ) works to advance the Tezos ecosystem by creating open source software and other public goods, providing support to projects and companies building on Tezos, and connecting the global Tezos community.',
     img: 'https://tezosprojects.com/img/TQ%20Tezos.jpg',
   },
-];
-
-export interface ProjectData {
-  type?: string;
-  title?: string;
-  description?: string;
-  website_link?: string;
-  social_link?: string;
-  misc_link?: string;
-  telegram_link?: string;
-  img?: string;
-  promoted?: boolean;
-  featured?: boolean;
-  popular?: boolean;
-}
-
-export interface PR {
-  type: string;
-  icon: Icon;
-  projects: ProjectData[];
-}
-
-export const tezProjects = [
-  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
-  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
-  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
-  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
-  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
-  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
-  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
-  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
-  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
-  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
-  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
-  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
-  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
-  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
-  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
-  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
-  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
-  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
-  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
 ];
 
 export default tezosProjects;

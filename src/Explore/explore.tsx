@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Item } from '../Categories/categories';
-import { tezProjects } from '../Data/data';
+import { projectCategories } from '../Data/data';
 
 interface Props {
   title: string;
@@ -17,7 +17,7 @@ export default function Categories(props: Props) {
       </Typography>
 
       <Grid container spacing={2}>
-        {tezProjects.map(({ type, icon }) => (
+        {projectCategories.map(({ type, icon }) => (
           <Grid item xs={12} sm={3}>
             <Item>
               <FontAwesomeIcon icon={icon} />
