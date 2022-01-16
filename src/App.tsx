@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="ecosystem" element={<Ecosystem />} />
         <Route path="category/:id" element={<Category />} />
-        <Route path="project/:category" element={<Project />} />
+        <Route path="project/:id" element={<Project />} />
       </Routes>
       <InfoBanner />
       <BottomNav />

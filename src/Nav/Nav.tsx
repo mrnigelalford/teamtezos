@@ -32,6 +32,8 @@ const Search = styled('div')(({ theme }) => ({
   },
 }));
 
+const goToSignUpForm = () => window.open('https://forms.gle/cdFQbPvSNpRuuXcd8', '_blank');
+
 const SearchIconWrapper = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: '100%',
@@ -168,6 +170,16 @@ export default function Navbar() {
             onClick={() => navigate('/')}
           >
             Team Tezos
+          </Typography>
+
+          <Typography
+            variant="body1"
+            noWrap
+            component="div"
+            sx={{ display: { sm: 'block', cursor: 'pointer', marginLeft: '2em' } }}
+            onClick={() => goToSignUpForm()}
+          >
+            Add a project
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
