@@ -44,7 +44,7 @@ export const projectCategories = [
 
 const extraData = [
   {
-    name: 'WRAP Protocol',
+    title: 'WRAP Protocol',
     short_description: 'Decentralized bridge between Ethereum and Tezos',
     full_description:
       'Through Wrap, users issue wTokens (wrapped tokens) which are representations of ERC20 and ERC721 tokens on the Tezos blockchain. wTokens can then be used on the Tezos blockchain, and their value is pegged to the original tokens. Wrap is a decentralized protocol, relying on a strong federation (the Signers Quorum) that guarantees the stability of the protocol, and a community of WRAP governance token holders.',
@@ -59,11 +59,11 @@ const extraData = [
     interfaces: ['FA2'],
     categories: ['Token', 'Wrapped'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzwrap/tzwrap_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzwrap/tzwrap_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzwrap/tzwrap_cover.png',
   },
   {
-    name: 'Youves',
+    title: 'Youves',
     short_description: 'Synthetic assets management',
     full_description:
       'Youves is a decentralised, non-custodial and self-governed platform for the creation and management of synthetic assets. Minters of synthetic assets earn a passive income in YOU, the governance token on youves. YOU tokens are awarded to minters by the youves protocol in relation to their minted synthetic assets. YOU holders have voting rights and the possibility to stake YOU tokens and receive their share of the platform profits.',
@@ -78,11 +78,11 @@ const extraData = [
     interfaces: ['FA2'],
     categories: ['Token', 'Stable'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/youves/youves_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/youves/youves_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/youves/youves_cover.png',
   },
   {
-    name: 'Atomex',
+    title: 'Atomex',
     short_description: 'Hybrid cross-chain exchange',
     full_description:
       'Atomex — is a non-custodial crypto wallet with a built in Atomic swap decentralized exchange (DEX). You can store, use and swap cryptocurrencies from a different blockchain like Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Tezos (XTZ), USDT (ERC20 token), tzBTC (Tezos wrapped Bitcoin token), TBTC and WBTC (Ethereum wrapped Bitcoin token) and other coins without intermediaries from your own HD wallet.',
@@ -98,7 +98,7 @@ const extraData = [
     interfaces: null,
     categories: ['DEX', 'Cross-chain'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/atomex/atomex_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/atomex/atomex_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/atomex/atomex_cover.jpg',
     screenshots: [
       {
@@ -140,7 +140,7 @@ const extraData = [
     ],
   },
   {
-    name: 'QuipuSwap',
+    title: 'QuipuSwap',
     short_description: 'A decentralized exchange on Tezos',
     full_description:
       'QuipuSwap is an open-source protocol that provides an interface for the seamless decentralized exchange of Tezos-based Tokens and XTZ. Using the advantages of Tezos protocol such as liquid XTZ delegation, liquidity providers earn both from swap fees and bakers rewards.',
@@ -156,12 +156,12 @@ const extraData = [
     interfaces: ['FA1.2', 'FA2'],
     categories: ['DEX'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/quipuswap/quipuswap_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/quipuswap/quipuswap_logo.jpg',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/quipuswap/quipuswap_cover.png',
   },
   {
-    name: 'tzBTC',
+    title: 'tzBTC',
     short_description: 'Wrapped Bitcoin',
     full_description:
       'tzBTC brings the liquidity and battle-tested brand of Bitcoin (BTC) into the Tezos ecosystem, enabling BTC-backed use-cases on Tezos. Developers on Tezos can use tzBTC to enable novel financial applications on the Tezos blockchain. Usable In Tezos Smart Contracts As an asset on Tezos, tzBTC enables Tezos-based applications to use BTC with the full expressivity of Tezos smart contracts. tzBTC is implemented using the FA 1.2 asset standard on Tezos. No single-point-of-failure. The tzBTC system divides governance among a group of Keyholders. Keyholders can access via multi-signature wallets the underlying Bitcoin and oversee supply management by minting and burning the corresponding tzBTC. Gatekeepers interact directly with End-Users and ensure compliance with KYC \u0026 AML documentation.',
@@ -172,11 +172,11 @@ const extraData = [
     interfaces: ['FA1.2'],
     categories: ['Token', 'Wrapped'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbtc/tzbtc_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbtc/tzbtc_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbtc/tzbtc_cover.jpg',
   },
   {
-    name: 'Plenty DeFi',
+    title: 'Plenty DeFi',
     short_description: 'Sustainable yield farming',
     full_description:
       'Plenty is a decentralized yield farm. The primary goal of Plenty is to bring more liquidity into the Tezos ecosytem. Plenty is incentivizing liquidity providers of other blockchains to bridge their assets to Tezos.',
@@ -193,11 +193,11 @@ const extraData = [
     interfaces: ['TZIP-7', 'TZIP-16'],
     categories: ['Farming', 'Token'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/plenty/plenty_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/plenty/plenty_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/plenty/plenty_cover.png',
   },
   {
-    name: 'objkt.com',
+    title: 'objkt.com',
     short_description: 'The largest NFT marketplace on Tezos.',
     full_description:
       'objkt.com is the first FA2 marketplace that aggregates tokens across contracts and provides a cohesive user interface to interact with and trade multimedia NFTs.',
@@ -208,7 +208,7 @@ const extraData = [
     interfaces: null,
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/objkt/objkt_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/objkt/objkt_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/objkt/objkt_cover.png',
     screenshots: [
       {
@@ -226,22 +226,22 @@ const extraData = [
     ],
   },
   {
-    name: 'Hic et nunc',
+    title: 'Hic et nunc',
     short_description: 'NFT marketplace',
     full_description:
       'The H=N platform combines the cost-effective utility working artists need and the eco-friendly characteristics they care about.',
-    website: 'https://www.hicetnunc.xyz/',
+    website: 'https://www.hicetnunc.art/',
     slug: 'hen',
     authors: [],
     social_links: ['https://twitter.com/hicetnunc2000', 'https://github.com/hicetnunc2000'],
     interfaces: ['FA2'],
     categories: ['NFT', 'Token'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/hen/hen_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/hen/hen_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/hen/hen_cover.jpg',
   },
   {
-    name: 'Kolibri',
+    title: 'Kolibri',
     short_description: 'Algorithmic stablecoin',
     full_description:
       'Kolibri is an Tezos based stablecoin built on Collateralized Debt Positions (CDPs) known as Ovens. Kolibri uses CDPs to collateralize a soft pegged USD-stable value asset, kUSD. Data is provided via the Harbinger Price Feed via the Oracle contract',
@@ -252,11 +252,11 @@ const extraData = [
     interfaces: ['FA1.2'],
     categories: ['Token', 'Stable'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kolibri/kolibri_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kolibri/kolibri_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kolibri/kolibri_cover.png',
   },
   {
-    name: 'Tezos Domains',
+    title: 'Tezos Domains',
     short_description: 'Friendly names on Tezos blockchain',
     full_description:
       "Tezos Domains is a distributed, open and extensible naming system using the Tezos blockchain. The main function is to translate a meaningful and user-friendly alias to it's corresponding Tezos address and vice versa. This translation is globally consistent so that all users see the same address for a given alias. Domains can be used to associate an address, share an avatar, publish contact information and more. Wallets and other projects in the ecosystem will let you use domain names directly instead of addresses and show domain names where Tezos addresses would be normally. The long term plan for Tezos Domains includes allowing websites to be built on Tezos Domains using decentralized content hosting like IPFS. This could serve as an alternative to traditional centralized solutions (i.e. DNS with centralized content hosting).",
@@ -271,12 +271,12 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezosdomains/tezosdomains_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezosdomains/tezosdomains_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezosdomains/tezosdomains_cover.png',
   },
   {
-    name: 'Kalamint',
+    title: 'Kalamint',
     short_description: 'NFT marketplace focused on the future',
     full_description:
       'We are an NFT marketplace focused on moving into the future of NFTs and staying true to blockchain technology. We are building our platform around the artist and not the other way around and are building strategic partnerships to help us achieve these goals. Kalamint hopes to be the bridge between other platforms, different mediums, and the real world and make NFTs so readily available that they become main stream without people knowing.',
@@ -292,7 +292,7 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kalamint/kalamint_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kalamint/kalamint_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/kalamint/kalamint_cover.jpg',
     screenshots: [
@@ -303,7 +303,7 @@ const extraData = [
     ],
   },
   {
-    name: 'Pixel Potus',
+    title: 'Pixel Potus',
     short_description: 'Digital collectable competition',
     full_description:
       'We hold these truths to be self-evident, that all NFTs are NOT created equal, that some are endowed by their Creator with certain unalienable rights, that among these are Life, Liberty and the pursuit of Pixelation.',
@@ -318,12 +318,12 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelpotus/pixelpotus_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelpotus/pixelpotus_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelpotus/pixelpotus_cover.jpg',
   },
   {
-    name: 'Crunchy network',
+    title: 'Crunchy network',
     short_description: 'DeFi-as-a-Service',
     full_description:
       'Crunchy provides DeFi services and solutions on Tezos to projects, developers, and end users. We like to think of ourselves as a DeFi-as-a-Service (DaaS) platform. Crunchy is maintained by independent developers and is governed by CrDAO holders.',
@@ -338,11 +338,11 @@ const extraData = [
     interfaces: [],
     categories: ['Farming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/crunchy/crunchy_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/crunchy/crunchy_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/crunchy/crunchy_cover.png',
   },
   {
-    name: 'ETHtez',
+    title: 'ETHtez',
     short_description: 'ETH-wrapped token',
     full_description:
       'ETHtez (ETHtz) is Ethereum currency, Ether (ETH), wrapped in a Tezos FA-standard token, enabling users to interact with a Tezos token that is priced to the value as ETH, yet without its high gas prices. Unlike interacting directly with ETH, which can incur massive gas fees, ETHtz users can enjoy the low-cost gas-efficiency of the Tezos network.',
@@ -358,11 +358,11 @@ const extraData = [
     interfaces: ['FA1.2'],
     categories: ['Token', 'Stable'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/ethtz/ethtz_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/ethtz/ethtz_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/ethtz/ethtz_cover.png',
   },
   {
-    name: 'Tezotopia',
+    title: 'Tezotopia',
     short_description: 'Virtual world with NFT yield farming',
     full_description:
       'Tezotopia is a Tezos-based Real-Time Strategy (RTS) gaming platform that allows players to acquire land (Tezotops), items and resources. Tezotops are yield farming NFTs. Buy, Sell, and Trade Digital Territories \u0026 Build Unique Virtual Assets in Tezotopia. Battle, earn, and win prizes such as Unobtanium.',
@@ -378,7 +378,7 @@ const extraData = [
     interfaces: ['TZIP-12', 'TZIP-16', 'TZIP-21'],
     categories: ['NFT', 'Marketplace', 'Gaming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezotopia/tezotopia_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezotopia/tezotopia_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezotopia/tezotopia_cover.png',
     screenshots: [
@@ -397,7 +397,7 @@ const extraData = [
     ],
   },
   {
-    name: 'StakerDAO',
+    title: 'StakerDAO',
     short_description: 'A platform for governing financial assets',
     full_description:
       'The StakerDAO community builds and manages products for on-chain governance, cross-chain synthetics, and tokenized real-world assets. StakerDAO is a new kind of organization: it is both a corporation – Staker Services Ltd based in the Cayman Islands – and a decentralized autonomous organization (DAO). The STKR equity token is built on the FA 1.x token standard on Tezos. Actions taken by StakerDAO are transparent and managed on the Tezos blockchain. Everyone can see the results of every proposal that is submitted and every vote the StakerDAO Council makes. The five members of the StakerDAO Council are elected annually through a Tezos on-chain vote of STKR token holders.',
@@ -412,7 +412,7 @@ const extraData = [
     interfaces: ['FA1'],
     categories: ['DAO', 'Token'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/stakerdao/stakerdao_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/stakerdao/stakerdao_logo.jpg',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/stakerdao/stakerdao_cover.png',
     screenshots: [
@@ -423,7 +423,7 @@ const extraData = [
     ],
   },
   {
-    name: 'akaSwap',
+    title: 'akaSwap',
     short_description: 'A friendly, open and green NFT marketplace.',
     full_description:
       'We are committed to building a simple, friendly, and open green NFT trading platform for everyone to easily create, trade, appreciate, collect, and promote various NFT valuable assets from all over the world. \nakaSwap hopes to open a new source of income for artists and provide collectors with a place to store and trade artworks. Artists can auction their creations or sell them at a customized price. \n* We recommend using Google Chrome, Mozilla Firefox or Microsoft Edge for the best experience.',
@@ -438,7 +438,7 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/akaswap/akaswap_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/akaswap/akaswap_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/akaswap/akaswap_cover.jpg',
     screenshots: [
       {
@@ -460,7 +460,7 @@ const extraData = [
     ],
   },
   {
-    name: 'Space Farm',
+    title: 'Space Farm',
     short_description: 'Token farming platform',
     full_description:
       'Stake your FLAME tokens and LP liquidity tokens to earn FLAME in our farms. Use your referral link to boost your stack.',
@@ -476,11 +476,11 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['Farming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/flame/flame_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/flame/flame_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/flame/flame_cover.jpg',
   },
   {
-    name: 'USDtez',
+    title: 'USDtez',
     short_description: 'Hard-backed USD stablecoin',
     full_description:
       'USDtez (USDtz) is the first USD stablecoin on Tezos. USDtez is fully-backed 1-1 by FIAT,  and built to the Tezos FA token standard, providing a solvent, scalable, and financial DApp programmable source of liquidity for low-fee Tezos-based asset trading. The USDtez Reserve is regularly audited but also viewable in real time by users. Its collateral is diversified amongst multiple and strictly regulated FIAT-backed assets, further strengthening its 1-1 parity with the United States Dollar (USD).',
@@ -496,11 +496,11 @@ const extraData = [
     interfaces: ['FA1.2'],
     categories: ['Token', 'Stable'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/usdtz/usdtz_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/usdtz/usdtz_logo.jpg',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/usdtz/usdtz_cover.png',
   },
   {
-    name: "Alien's Farm",
+    title: "Alien's Farm",
     short_description: 'The first alien yield farm on Tezos',
     full_description:
       "Alien's Farm is an open-source platform with a couple of farming products on Tezos blockchain aimed to bring fresh financial abstractions to the network and open up new economic opportunities for community members who are eager for yield mechanics.",
@@ -515,7 +515,7 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['Farming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/aliensfarm/aliensfarm_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/aliensfarm/aliensfarm_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/aliensfarm/aliensfarm_cover.png',
     screenshots: [
@@ -526,7 +526,7 @@ const extraData = [
     ],
   },
   {
-    name: 'FARM',
+    title: 'FARM',
     short_description: 'FARMing and Rotational Airdrops',
     full_description:
       'FARM is a Tezos-based farming platform that uses staked SOIL token LP to generate FARM. FARM token is the utility token for the FARM platform. You can stake FARM LP on our website to qualify for airdrops of XTZ, Teztees, NFTs, and various other assets. You can also use FARM to farm Dos Esposas ingredients on Crunchy.network.',
@@ -537,12 +537,12 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['Farming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/farmsoil/farmsoil_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/farmsoil/farmsoil_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/farmsoil/farmsoil_cover.png',
   },
   {
-    name: 'Werenode',
+    title: 'Werenode',
     short_description: 'Share your own EV charging station',
     full_description:
       'Thanks to Tezos distributed ledger technologies, everybody will be able to be compensated seamlessly for the shared use of his personal charging station. Connect instantly to any EV supply equipment with your phone, just plug and charge. Ready for your clean and sustainable mobility!',
@@ -558,12 +558,12 @@ const extraData = [
     interfaces: ['TZIP-7'],
     categories: ['Token'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/werenode/werenode_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/werenode/werenode_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/werenode/werenode_cover.png',
   },
   {
-    name: 'World War Tez',
+    title: 'World War Tez',
     short_description: 'RPG where players battle each other',
     full_description:
       'An RPG-style dApp where players can power up, battle each other to conquer territories, earn bonuses from liquidity pool balances and equipment, and trade avatars with other players.',
@@ -578,12 +578,12 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['Token', 'Gaming'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/worldwartez/worldwartez_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/worldwartez/worldwartez_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/worldwartez/worldwartez_cover.png',
   },
   {
-    name: 'Project Uanon',
+    title: 'Project Uanon',
     short_description: 'The Truth as entertainment',
     full_description:
       "Project Uanon is a dystopian cyber adventure puzzle set in the near term future. It's the first game to use Zero Knowledge cryptographic proofs to grant and distribute rewards, and prove player progress and leaderboard point rankings. Players proceed through 6 stages of the game world, called “seasons”, competing for seasonal prizes and an overall prize awarded to the first player to correctly solve all 6 seasons. In this game world, mainstream media is rarely trusted and conspiracy theories abound. Certifiable truth comes at premium value, disseminated in the form of NFT tokens called Truth Shards.",
@@ -600,7 +600,7 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_cover.jpg',
     screenshots: [
       {
@@ -630,7 +630,7 @@ const extraData = [
     ],
   },
   {
-    name: 'Bazaar',
+    title: 'Bazaar',
     short_description: 'Carbon-Offset NFTs',
     full_description:
       'Bazaar Market is the first ever carbon-negative NFT Market, based on OpenMinter, an open source platform for making dApps on Tezos.',
@@ -646,11 +646,11 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT', 'Marketplace', 'Token'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/bazaar/bazaar_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/bazaar/bazaar_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/bazaar/bazaar_cover.png',
   },
   {
-    name: 'Tezos Mandala',
+    title: 'Tezos Mandala',
     short_description: 'Unique digital mandalas as NFTs',
     full_description:
       'Create your unique digital mandalas as NFTs. All mandalas are recorded in the Tezos blockchain. This makes them truly decentralized, and ever-lasting.',
@@ -661,11 +661,11 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/mandala/mandala_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/mandala/mandala_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/mandala/mandala_cover.png',
   },
   {
-    name: 'TEZEX Bridge',
+    title: 'TEZEX Bridge',
     short_description: 'Inter-chain token swaps',
     full_description:
       'TEZEX is a Tezos liquidity exchange expanding liquidity flow via inter-chain and intra-chain token trading. TEZEX Bridge enables cross-chain token swaps between Tezos tokens and tokens of other blockchains like Ethereum — that is, Ethereum ERC-standard tokens (e.g. ERC-20) can be swapped for Tezos FA-standard tokens (e.g. FA-1.2, FA-2.0).',
@@ -680,11 +680,11 @@ const extraData = [
     interfaces: [],
     categories: ['DEX', 'Cross-chain'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezex/tezex_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezex/tezex_logo.png',
     cover: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezex/tezex_cover.png',
   },
   {
-    name: 'Golden Goals',
+    title: 'Golden Goals',
     short_description: 'Football oriented NFT marketplace',
     full_description:
       "Golden Goals is the new virtual gallery for football clubs and fan art. We believe that football is an art. Thanks to Blockchain technology, you can build your very own virtual collection of football art. You can find exclusive content from clubs and artists that you'll be able to share and trade! Official clubs account will create content, and fans/artists are able to collect it or even create NFTs associated with their favorite team. Your collection is your emotions' museum.",
@@ -699,12 +699,12 @@ const extraData = [
     interfaces: ['TZIP-12'],
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/goldengoals/goldengoals_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/goldengoals/goldengoals_logo.jpg',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/goldengoals/goldengoals_cover.png',
   },
   {
-    name: 'TzColors',
+    title: 'TzColors',
     short_description: 'Unique colors as NFT tokens',
     full_description:
       'Get your hands on one of the 1690 unique NFT tzcolors tokens. Buy, Bid and Resell your Colors! Have fun and remeber, they are limited ;) Each color artwork is sold in an inital account. The inital account has a duration of 7 days. On completion, the highest bidder wins the color and can claim it. The reward of all initial accounts go to a specified address. An owner of a color artwork can create a new auction and specify the minimum bid amount and the auction duration. Each bid additionally extends the auction end time by 5 minutes. The highest bidder can claim the token and the previous owner can claim the reward.',
@@ -721,12 +721,12 @@ const extraData = [
     interfaces: [],
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzcolors/tzcolors_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzcolors/tzcolors_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzcolors/tzcolors_cover.png',
   },
   {
-    name: 'Pixel Posh',
+    title: 'Pixel Posh',
     short_description: '999 very fancy generative pixel art portraits.',
     full_description:
       'Pixel Posh is a series of 999 very fancy generative pixel art portraits, created by Lanton Mills. Each portrait is unique. There are 37 different species and thousands of possible clothing combinations.',
@@ -737,7 +737,7 @@ const extraData = [
     interfaces: null,
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelposh/pixelposh_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelposh/pixelposh_logo.jpg',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelposh/pixelposh_cover.jpg',
     screenshots: [
@@ -768,7 +768,7 @@ const extraData = [
     ],
   },
   {
-    name: 'ByteBlock NFT',
+    title: 'ByteBlock NFT',
     short_description: 'Empowering millions of artist through Tezos.',
     full_description:
       'byteblock.art is the first FA2 marketplace that is aiming to empower millions of artist. We are the first NFT platform on Tezos to launch NFT-as-a-Service (NaaS)',
@@ -784,7 +784,7 @@ const extraData = [
     interfaces: null,
     categories: ['NFT', 'Marketplace'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/byteblock/byteblock_logo.jpg',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/byteblock/byteblock_logo.jpg',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/byteblock/byteblock_cover.jpg',
     screenshots: [
@@ -799,7 +799,7 @@ const extraData = [
     ],
   },
   {
-    name: 'TzButton',
+    title: 'TzButton',
     short_description: 'Tezos-blockchain based game',
     full_description:
       'The TzButton experiment is controlled by a smart contract deployed on the Tezos blockchain. Whenever anyone presses the button three things will happen:\n1. You will add 0.2 tez to the smart contract’s balance\n2. The address of the sender will become the leader\n3. The countdown is reset\n\nThe address that is the leader after the countdown expired will be eligible to withdraw the total balance on the smart contract.',
@@ -817,7 +817,7 @@ const extraData = [
     interfaces: [],
     categories: ['Game', 'Social'],
     soon: false,
-    logo: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbutton/tzbutton_logo.png',
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbutton/tzbutton_logo.png',
     cover:
       'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzbutton/tzbutton_cover.png',
     screenshots: [
