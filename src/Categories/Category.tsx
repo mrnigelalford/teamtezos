@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 
 export default function Category() {
   const { id } = useParams();
-  const filteredCategory = tezosProjects.filter((p) => p.type.toLowerCase() === id?.toLowerCase());
+  const filteredCategory = tezosProjects.filter((p) => p.type?.toLowerCase() === id?.toLowerCase());
   const categoryFeatured = tezosProjects.filter((p) => p.featuredAcrossSite?.categories)[0];
 
   return (

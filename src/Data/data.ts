@@ -35,31 +35,55 @@ export interface ProjectData {
   featuredAcrossSite?: { home: boolean };
 }
 
+enum projectType {
+  game = 'Game',
+  tools = 'Tools',
+  developers = 'Developers',
+  other = 'Other',
+  nft = 'NFT',
+  defi = 'DEFI',
+  dao = 'DAO',
+  dapp = 'dapp',
+  exchange = 'Exchanges (DEX)',
+  identity = 'Identity',
+  community = 'Community',
+  gaming = 'Gaming',
+  insurance = 'Insurance',
+  corporateBaker = 'Corporate Baker',
+  stablecoin = 'Stablecoin',
+  realEstate = 'Real Estate',
+  wallet = 'Wallet',
+  oracle = 'Oracle',
+  data = 'Data',
+  education = 'Education',
+  launchpad = 'Launchpad',
+}
+
 export const projectCategories = [
-  { type: 'NFT', icon: faArtstation, projects: [] as ProjectData[] },
-  { type: 'DEFI', icon: faCoins, projects: [] as ProjectData[] },
-  { type: 'Dapp', icon: faUsers, projects: [] as ProjectData[] },
-  { type: 'Tools', icon: faBalanceScaleRight, projects: [] as ProjectData[] },
-  { type: 'Developers', icon: faPaw, projects: [] as ProjectData[] },
-  { type: 'Real-estate', icon: faHouseDamage, projects: [] as ProjectData[] },
-  { type: 'Stablecoin', icon: faDonate, projects: [] as ProjectData[] },
-  { type: 'Wallet', icon: faWallet, projects: [] as ProjectData[] },
-  { type: 'Corporate Baker', icon: faSchool, projects: [] as ProjectData[] },
-  { type: 'DAO', icon: faPeopleArrows, projects: [] as ProjectData[] },
-  { type: 'Exchanges (DEX)', icon: faPiggyBank, projects: [] as ProjectData[] },
-  { type: 'Identity', icon: faIdBadge, projects: [] as ProjectData[] },
-  { type: 'Community', icon: faHeart, projects: [] as ProjectData[] },
-  { type: 'Oracle', icon: faGlasses, projects: [] as ProjectData[] },
-  { type: 'Data', icon: faDatabase, projects: [] as ProjectData[] },
-  { type: 'Gaming', icon: faGamepad, projects: [] as ProjectData[] },
-  { type: 'Education', icon: faMoneyBillAlt, projects: [] as ProjectData[] },
-  { type: 'Insurance', icon: faCreditCard, projects: [] as ProjectData[] },
-  { type: 'Launchpad', icon: faRocket, projects: [] as ProjectData[] },
+  { type: projectType.nft, icon: faArtstation, projects: [] as ProjectData[] },
+  { type: projectType.defi, icon: faCoins, projects: [] as ProjectData[] },
+  { type: projectType.dapp, icon: faUsers, projects: [] as ProjectData[] },
+  { type: projectType.tools, icon: faBalanceScaleRight, projects: [] as ProjectData[] },
+  { type: projectType.developers, icon: faPaw, projects: [] as ProjectData[] },
+  { type: projectType.realEstate, icon: faHouseDamage, projects: [] as ProjectData[] },
+  { type: projectType.stablecoin, icon: faDonate, projects: [] as ProjectData[] },
+  { type: projectType.wallet, icon: faWallet, projects: [] as ProjectData[] },
+  { type: projectType.corporateBaker, icon: faSchool, projects: [] as ProjectData[] },
+  { type: projectType.dao, icon: faPeopleArrows, projects: [] as ProjectData[] },
+  { type: projectType.exchange, icon: faPiggyBank, projects: [] as ProjectData[] },
+  { type: projectType.identity, icon: faIdBadge, projects: [] as ProjectData[] },
+  { type: projectType.community, icon: faHeart, projects: [] as ProjectData[] },
+  { type: projectType.oracle, icon: faGlasses, projects: [] as ProjectData[] },
+  { type: projectType.data, icon: faDatabase, projects: [] as ProjectData[] },
+  { type: projectType.gaming, icon: faGamepad, projects: [] as ProjectData[] },
+  { type: projectType.education, icon: faMoneyBillAlt, projects: [] as ProjectData[] },
+  { type: projectType.insurance, icon: faCreditCard, projects: [] as ProjectData[] },
+  { type: projectType.launchpad, icon: faRocket, projects: [] as ProjectData[] },
 ];
 
 const tezosProjects = [
   {
-    type: 'NFT',
+    type: projectType.nft,
     promoted: false,
     featured: false,
     popular: true,
@@ -76,7 +100,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Red%20Bull.jpg',
   },
   {
-    type: 'DEFI',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -92,7 +116,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/lugh.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: true,
     featured: true,
     popular: true,
@@ -107,7 +131,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Kolibri.jpg',
   },
   {
-    type: 'NFT',
+    type: projectType.nft,
     promoted: true,
     featured: true,
     popular: true,
@@ -127,7 +151,7 @@ const tezosProjects = [
     img: 'https://s2.qwant.com/thumbr/400x400/5/a/f19f154034e138094bea7c0c3705abbbe1f76006ae5f8ee617170f868e1bf1/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.JPh_wtgf0gREKNhmHN4jZwGQGQ%26pid%3DApi&q=0&b=1&p=0&a=0',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -142,7 +166,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezfin.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -161,7 +185,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Quipuswap.jpg',
   },
   {
-    type: 'DAO',
+    type: projectType.dao,
     promoted: false,
     featured: false,
     popular: false,
@@ -176,7 +200,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Homebase.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -196,7 +220,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Smartlink.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -211,7 +235,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Wrap%20Protocol.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -226,7 +250,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Wakam.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -241,7 +265,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/wXTZ.jpg',
   },
   {
-    type: 'Corporate Baker',
+    type: projectType.corporateBaker,
     promoted: false,
     featured: false,
     popular: false,
@@ -256,7 +280,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/exaion.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -272,7 +296,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Societe%20General.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -287,7 +311,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/ETHtez.jpg',
   },
   {
-    type: 'Corporate Baker',
+    type: projectType.corporateBaker,
     promoted: false,
     featured: false,
     popular: false,
@@ -303,7 +327,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Sword%20Group.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -319,7 +343,7 @@ const tezosProjects = [
   },
   {
     // review this category
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -334,7 +358,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/RADION%20FM.jpg',
   },
   {
-    type: 'stablecoin',
+    type: projectType.stablecoin,
     promoted: false,
     featured: false,
     popular: false,
@@ -349,7 +373,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/StableTez.jpg',
   },
   {
-    type: 'nft',
+    type: projectType.nft,
     promoted: false,
     featured: false,
     popular: false,
@@ -365,7 +389,7 @@ const tezosProjects = [
   },
   {
     // review this category
-    type: 'Exchanges (DEX)',
+    type: projectType.exchange,
     promoted: false,
     featured: false,
     popular: false,
@@ -379,7 +403,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/SEXP.jpg',
   },
   {
-    type: 'nft',
+    type: projectType.nft,
     promoted: false,
     featured: false,
     popular: false,
@@ -393,7 +417,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Kalamint.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -408,7 +432,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Werenode.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -423,7 +447,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Harbinger.jpg',
   },
   {
-    type: 'stablecoin',
+    type: projectType.stablecoin,
     promoted: false,
     featured: false,
     popular: false,
@@ -438,7 +462,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/tzBTC.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -453,7 +477,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/DAOBaker.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -469,7 +493,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Dexter.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -484,7 +508,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Envited.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -498,7 +522,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Reward%20Distributor.jpg',
   },
   {
-    type: 'Identity',
+    type: projectType.identity,
     promoted: false,
     featured: false,
     popular: false,
@@ -513,7 +537,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Decentralized%20Identity.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -528,7 +552,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Gendarmerie%20Nationale.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -541,7 +565,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Kiln.jpg',
   },
   {
-    type: 'community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -567,7 +591,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Tenderbake.jpg',
   // },
   {
-    type: 'corporate baker',
+    type: projectType.corporateBaker,
     promoted: false,
     featured: false,
     popular: false,
@@ -581,7 +605,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/BTG.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -595,7 +619,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Equisafe.jpg',
   },
   // {
-  //   type: 'defi',
+  //  type: projectType.defi,
   // promoted: false,
   // featured: false,
   //   title: 'Spark',
@@ -607,7 +631,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Spark.jpg',
   // },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -622,7 +646,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Link.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -637,7 +661,7 @@ const tezosProjects = [
   },
   {
     // review this category
-    type: 'real-estate',
+    type: projectType.realEstate,
     promoted: false,
     featured: false,
     popular: false,
@@ -653,7 +677,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Alliance%20Investments.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -667,7 +691,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Stackexchange.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -681,7 +705,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/NYX%20Standard.jpg',
   },
   {
-    type: 'real-estate',
+    type: projectType.realEstate,
     promoted: false,
     featured: false,
     popular: false,
@@ -695,7 +719,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Elevated%20Returns.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -708,7 +732,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Nautilus%20Cloud.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -722,7 +746,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Vertalo.jpg',
   },
   {
-    type: 'Identity',
+    type: projectType.identity,
     promoted: false,
     featured: false,
     popular: false,
@@ -735,7 +759,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Mininax.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -748,7 +772,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Arronax.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -762,7 +786,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Silicon%20Valley%20Coin.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -777,7 +801,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezosKit.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -791,7 +815,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Checker.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -804,7 +828,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TzKt.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -818,7 +842,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Israel.jpg',
   },
   {
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -831,7 +855,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/imToken.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -845,7 +869,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Cortez%20Wallet.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -858,7 +882,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Morley.jpg',
   },
   {
-    type: 'Identity',
+    type: projectType.identity,
     promoted: false,
     featured: false,
     popular: false,
@@ -870,7 +894,7 @@ const tezosProjects = [
     img: 'https://tezid.net/logo-notext.svg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -884,7 +908,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Ukraine.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -898,7 +922,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tulip%20Tools.jpg',
   },
   {
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -926,7 +950,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Protofire.jpg',
   },
   // {
-  //   type: 'wallet',
+  //   type: projectType.wallet,
   // promoted: false,
   // featured: false,
   //   title: 'Kukai Wallet',
@@ -937,7 +961,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Kukai%20Wallet.jpg',
   // },
   {
-    type: 'Exchanges (DEX)',
+    type: projectType.exchange,
     promoted: false,
     featured: false,
     popular: false,
@@ -963,7 +987,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezBridge.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -976,7 +1000,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Misualizer.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -989,7 +1013,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/eztz.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1027,7 +1051,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Baking%20Bad.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -1040,7 +1064,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Stakepool.jpg',
   },
   {
-    type: 'corporate baker',
+    type: projectType.corporateBaker,
     promoted: false,
     featured: false,
     popular: false,
@@ -1053,7 +1077,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Sygnum.jpg',
   },
   {
-    type: 'education',
+    type: projectType.education,
     promoted: false,
     featured: false,
     popular: false,
@@ -1066,7 +1090,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Academy.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1079,7 +1103,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Cryptonomic.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -1102,7 +1126,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Coinbase%20Custody.jpg',
   // },
   {
-    type: 'Insurance',
+    type: projectType.insurance,
     promoted: false,
     featured: false,
     popular: false,
@@ -1115,7 +1139,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezsure.jpg',
   },
   // {
-  //   type: 'dapp',
+  //   type: projectType.dapp,
   // promoted: false,
   // featured: false,
   //   title: 'zkChannels',
@@ -1126,7 +1150,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/zkChannels.jpg',
   // },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -1139,7 +1163,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/BlockFi.jpg',
   },
   // {
-  //   type: 'wallet',
+  //   type: projectType.wallet,
   // promoted: false,
   // featured: false,
   //   title: 'Sylo',
@@ -1164,7 +1188,7 @@ const tezosProjects = [
   },
   {
     // redo this its outdated
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -1177,7 +1201,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Thanos%20Wallet.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1190,7 +1214,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Blockchair.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -1203,7 +1227,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/USDtez.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -1216,7 +1240,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TEZEX.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1229,7 +1253,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Netezos.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -1242,7 +1266,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Stably.jpg',
   },
   {
-    type: 'gaming',
+    type: projectType.gaming,
     promoted: false,
     featured: false,
     popular: false,
@@ -1255,7 +1279,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Coase.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1268,7 +1292,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Pocket%20Network.jpg',
   },
   {
-    type: 'Community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1281,7 +1305,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Gulf.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1294,7 +1318,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Baker%20Leaderboard.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1306,7 +1330,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Reward%20Calculator.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1319,7 +1343,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20TAPS.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1332,7 +1356,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezosJ_SDK.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1345,7 +1369,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezosJ_SDK_plainJava.jpg',
   },
   {
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -1358,7 +1382,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezzeT%20Wallet.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1371,7 +1395,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Taquito.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1384,7 +1408,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/PyTezos.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1397,7 +1421,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Notifier.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1410,7 +1434,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/decet.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1422,7 +1446,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Baking%20Bad%20Baking%20Auditor.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1444,7 +1468,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/tezblock.jpg',
   // },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1517,7 +1541,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Protocol%20Upgrade%20-%20004%20Athen.jpg',
   // },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1529,7 +1553,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Smart%20Contract%20Labs.jpg',
   },
   {
-    type: 'Community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1540,7 +1564,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Japan.jpg',
   },
   {
-    type: 'Community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1551,7 +1575,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20India%20Foundation.jpg',
   },
   {
-    type: 'community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1563,7 +1587,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Southeast%20Asia.jpg',
   },
   {
-    type: 'education',
+    type: projectType.education,
     promoted: false,
     featured: false,
     popular: false,
@@ -1575,7 +1599,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Capstone.jpg',
   },
   {
-    type: 'education',
+    type: projectType.education,
     promoted: false,
     featured: false,
     popular: false,
@@ -1587,7 +1611,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Zastrin.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1599,7 +1623,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/The%20Michelson%20Language.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1611,7 +1635,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/SMARTPY.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1623,7 +1647,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/fi.jpg',
   },
   {
-    type: 'tools',
+    type: projectType.tools,
     promoted: false,
     featured: false,
     popular: false,
@@ -1634,7 +1658,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/LIGO.jpg',
   },
   {
-    type: 'education',
+    type: projectType.education,
     promoted: false,
     featured: false,
     popular: false,
@@ -1646,7 +1670,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TOMI.jpg',
   },
   // {
-  //   type: 'tools',
+  //   type: projectType.tools,
   // promoted: false,
   // featured: false,
   //   title: 'Conseil by Cryptonomic',
@@ -1657,7 +1681,7 @@ const tezosProjects = [
   // },
   {
     // review this
-    type: 'Developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1669,7 +1693,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/ConseilJS%20by%20Cryptonomic.jpg',
   },
   {
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -1681,7 +1705,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Galleon.jpg',
   },
   {
-    type: 'Gaming',
+    type: projectType.gaming,
     promoted: false,
     featured: false,
     popular: false,
@@ -1693,7 +1717,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TezDice.jpg',
   },
   {
-    type: 'wallet',
+    type: projectType.wallet,
     promoted: false,
     featured: false,
     popular: false,
@@ -1705,7 +1729,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/AirGap.jpg',
   },
   {
-    type: 'Exchanges (DEX)',
+    type: projectType.exchange,
     promoted: false,
     featured: false,
     popular: false,
@@ -1717,7 +1741,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Sustain%20Exchange.jpg',
   },
   // {
-  //   type: 'dapp',
+  //   type: projectType.dapp,
   // promoted: false,
   // featured: false,
   //   title: 'Baanx',
@@ -1727,7 +1751,7 @@ const tezosProjects = [
   //   img: 'https://tezosprojects.com/img/Baanx.jpg',
   // },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1739,7 +1763,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/CHORUS%20mobility.jpg',
   },
   {
-    type: 'education',
+    type: projectType.education,
     promoted: false,
     featured: false,
     popular: false,
@@ -1751,7 +1775,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/B9lab.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -1763,7 +1787,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/CLAUSE.jpg',
   },
   {
-    type: 'defi',
+    type: projectType.defi,
     promoted: false,
     featured: false,
     popular: false,
@@ -1775,7 +1799,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/QR%20Capital%20-%20DEX.jpg',
   },
   {
-    type: 'dapp',
+    type: projectType.dapp,
     promoted: false,
     featured: false,
     popular: false,
@@ -1786,7 +1810,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/LegiCash.jpg',
   },
   {
-    type: 'Community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1797,7 +1821,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Foundation.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1808,7 +1832,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Commons%20Foundation.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
@@ -1819,7 +1843,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Nomadic%20Labs.jpg',
   },
   {
-    type: 'Community',
+    type: projectType.community,
     promoted: false,
     featured: false,
     popular: false,
@@ -1829,7 +1853,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/Tezos%20Korea.jpg',
   },
   {
-    type: 'developers',
+    type: projectType.developers,
     promoted: false,
     featured: false,
     popular: false,
