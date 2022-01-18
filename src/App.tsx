@@ -7,8 +7,14 @@ import Ecosystem from './Ecosystem/ecosystem';
 import { Home } from './Home/Home';
 import Navbar from './Nav/Nav';
 import Project from './Project/project';
+import ReactGA from 'react-ga';
 
 function App() {
+  const sampleTrackingCode = 'G-YTKY2XZRC2';
+
+  ReactGA.initialize(sampleTrackingCode);
+  ReactGA.pageview(window.location.pathname);
+
   return (
     <div className="App">
       <Navbar />
