@@ -13,10 +13,20 @@ export const Home = () => {
   return (
     <Container>
       <Header />
-      <ProjectList title="Promoted Products" CTA="Promote now" projects={promotedProjects} />
+      <ProjectList
+        title="Promoted Products"
+        CTA="Promote now"
+        EXTERNAL_URL="https://forms.gle/RiiuPuNT8sthTgQZ7"
+        projects={promotedProjects}
+      />
       <Categories title="Categories" />
-      <ProjectList title="Popular Products" projects={popularProjects} />
-      <ProjectList title="Recently Added" CTA="Show all" projects={featuredProjects} />
+      <ProjectList title="Popular Products" projects={popularProjects} EXTERNAL_URL="/" />
+      <ProjectList
+        title="Recently Added"
+        CTA="Show all"
+        projects={featuredProjects}
+        EXTERNAL_URL="/"
+      />
     </Container>
   );
 };

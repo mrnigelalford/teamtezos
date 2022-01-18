@@ -29,32 +29,24 @@ const rows = [
     links: [
       {
         text: 'Explore all projects',
-        nav: 'home/',
-      },
-      {
-        text: 'Interactive Ecosystem map',
-        nav: 'home/',
+        nav: '/ecosystem',
       },
     ],
   },
   {
     title: 'Team Tezos',
     links: [
-      {
-        text: 'About',
-        nav: 'home/',
-      },
+      // {
+      //   text: 'About',
+      //   nav: '/',
+      // },
       {
         text: 'Promote your project',
-        nav: 'home/',
-      },
-      {
-        text: 'Become a Partner',
-        nav: 'home/',
+        nav: 'https://forms.gle/8mrUCtNf2AG7LTqR7',
       },
       {
         text: 'Contact',
-        nav: 'home/',
+        nav: 'mailto:hello@teamtezos.xyz?subject=Mail from our Team Tezos',
       },
     ],
   },
@@ -63,7 +55,7 @@ const rows = [
     links: [
       {
         text: 'Add a project',
-        nav: 'home/',
+        nav: 'https://forms.gle/gJEW9U1vgJf1jJun9',
       },
     ],
   },
@@ -74,9 +66,7 @@ export default function InfoBanner() {
     <Box sx={{ flexGrow: 1 }} style={{ marginTop: '2em' }}>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={3}>
-          <Typography variant="h6" style={{ textAlign: 'left' }} gutterBottom component="div">
-            {'<Icon Here>'}
-          </Typography>
+          <img src={'teamtezos512.png'} style={{ width: '10em' }} alt="Team Tezos" />
         </Grid>
 
         {rows.map((r, i) => (

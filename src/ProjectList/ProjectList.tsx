@@ -16,11 +16,19 @@ const Item = styled(Paper)(({ theme }) => ({
 interface Props {
   title: string;
   CTA?: string;
+  EXTERNAL_URL: string;
   projects?: ProjectData[];
+  onClick?: () => void;
+}
+interface TitleBarProps {
+  title: string;
+  CTA?: string;
+  projects?: ProjectData[];
+  onClick?: () => void;
 }
 
-const TitleBar = (props: Props) => (
-  <div style={{ display: 'flex', width: '100%' }}>
+const TitleBar = (props: TitleBarProps) => (
+  <div style={{ display: 'flex', width: '100%' }} onClick={props.onClick}>
     <Typography variant="h5" gutterBottom component="div">
       {props.title}
     </Typography>
@@ -45,7 +53,11 @@ export default function ProjectList(props: Props) {
   let navigate = useNavigate();
   return (
     <Box sx={{ flexGrow: 1, marginTop: '2em', display: 'flex', flexWrap: 'wrap' }}>
-      <TitleBar title={props.title} CTA={props.CTA} />
+      <TitleBar
+        title={props.title}
+        CTA={props.CTA}
+        onClick={() => window.open(props.EXTERNAL_URL, '_blank')}
+      />
       {props.projects?.length && (
         <Grid container spacing={2}>
           {props.projects?.slice(0, 4).map((project, i) => (

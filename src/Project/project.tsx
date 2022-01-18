@@ -110,7 +110,7 @@ export default function Project() {
       <PromotedProject />
 
       <Box sx={{ marginTop: '4em', marginBottom: '2em', height: '4em' }}></Box>
-      <ProjectList title="More Projects" CTA="Promote now" />
+      <ProjectList title="More Projects" CTA="Promote now" EXTERNAL_URL="/ecosystem" />
     </Container>
   );
 }
