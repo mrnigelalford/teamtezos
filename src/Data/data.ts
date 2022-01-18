@@ -113,6 +113,7 @@ const tezosProjects = [
     popular: true,
     featuredAcrossSite: {
       home: true,
+      project: true,
     },
     date_added: '2022-01-01',
     title: 'Objkt',

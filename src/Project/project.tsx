@@ -10,6 +10,10 @@ export default function Project() {
   const { id } = useParams();
   let navigate = useNavigate();
 
+  const goToProjectSite = (link?: string) => (link ? window.open(link, '_blank') : navigate('/'));
+
+  const projectFeatured = tezosProjects.filter((p) => p.featuredAcrossSite?.home)[0];
+
   if (!id) return <></>;
   console.log('type: ', typeof decodeURIComponent(id || ''));
   const _id = decodeURIComponent(id);
@@ -34,17 +38,17 @@ export default function Project() {
 
       <Box sx={{ marginLeft: 'auto', display: 'inline-flex' }}>
         <img
-          src={promotedProject.img || logo}
+          src={projectFeatured.img || logo}
           className="logo"
           alt="logo"
           style={{ maxHeight: '2em', opacity: 0.3 }}
         />
         <Box style={{ marginLeft: '1em', textAlign: 'left' }}>
           <Typography style={{ color: 'darkslategrey' }} variant="body1" component="div">
-            {promotedProject.title || 'Project Title'}
+            {projectFeatured.title || 'Project Title'}
           </Typography>
           <Typography sx={{ fontSize: '.5em' }} variant="body1" gutterBottom component="div">
-            {promotedProject.description || 'Project Description'}
+            {projectFeatured.description || 'Project Description'}
           </Typography>
         </Box>
       </Box>
@@ -58,16 +62,15 @@ export default function Project() {
         m: 1,
         textAlign: 'left',
         height: '60%',
+        cursor: 'pointer',
       }}
+      onClick={() => navigate('/ecosystem')}
     >
       <Typography style={{ textAlign: 'left' }} variant="subtitle2" gutterBottom component="div">
         {`<`} Back to Projects
       </Typography>
     </Box>
   );
-
-  const goToProjectSite = () =>
-    project.website_link ? window.open(project.website_link, '_blank') : navigate('/');
 
   const ProjectHeader = () => (
     <Box
@@ -92,7 +95,7 @@ export default function Project() {
         >
           {project.description}
         </Typography>
-        <Button variant="outlined" onClick={() => goToProjectSite()}>
+        <Button variant="outlined" onClick={() => goToProjectSite(project.website_link)}>
           Visit Website
         </Button>
       </Box>
