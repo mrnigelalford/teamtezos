@@ -8,7 +8,7 @@ interface brickProps {
 }
 const DataBrick = (bricks: brickProps) => {
   return (
-    <Grid item xs={12} sm={3} style={{ textAlign: 'left' }}>
+    <Grid item xs={12} sm={3} style={{ textAlign: 'center' }}>
       <Typography variant="h6" gutterBottom component="div">
         {bricks.title}
       </Typography>
