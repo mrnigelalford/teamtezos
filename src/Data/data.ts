@@ -23,6 +23,7 @@ export interface ProjectData {
   type?: string;
   title?: string;
   description?: string;
+  short_description?: string;
   website_link?: string;
   social_link?: string;
   misc_link?: string;
@@ -31,6 +32,7 @@ export interface ProjectData {
   promoted?: boolean;
   featured?: boolean;
   popular?: boolean;
+  featuredAcrossSite?: { home: boolean };
 }
 
 export const projectCategories = [
@@ -109,15 +111,19 @@ const tezosProjects = [
     promoted: true,
     featured: true,
     popular: true,
+    featuredAcrossSite: {
+      home: true,
+    },
     date_added: '2022-01-01',
-    title: 'hicetnunc',
+    title: 'Objkt',
     description:
-      'Are you an NFT artist looking to get started on Tezos in order to mint clean NFTs for low fees? Enter the Tezos NFT ecosystem through Hicetnunc.',
-    website_link: 'https://www.hicetnunc.art/',
-    social_link: 'https://twitter.com/TezosFinance',
-    misc_link: 'https://medium.com/madfish-solutions',
-    telegram_link: 'https://t.me/oropocket',
-    img: 'https://tezosprojects.com/img/hicetnunc.jpg',
+      'Buy and sell your NFTs on our marketplace or try out an English or a Dutch Auction.',
+    short_description:
+      'We want to enable price discovery and provide tools that make it easier for the community to buy and sell NFTs on Tezos.',
+    website_link: 'https://objkt.com',
+    social_link: 'https://twitter.com/objktcom',
+    discord_link: 'https://discord.gg/m7YFqPvmj6',
+    img: 'https://s2.qwant.com/thumbr/400x400/5/a/f19f154034e138094bea7c0c3705abbbe1f76006ae5f8ee617170f868e1bf1/th.jpg?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.JPh_wtgf0gREKNhmHN4jZwGQGQ%26pid%3DApi&q=0&b=1&p=0&a=0',
   },
   {
     type: 'defi',
@@ -141,6 +147,10 @@ const tezosProjects = [
     popular: false,
     date_added: '2022-01-01',
     title: 'Quipuswap',
+    featuredAcrossSite: {
+      ecosystem: true,
+      home: false,
+    },
     description:
       'Quipuswap - the protocol that aims to provide an easy interface for a decentralized token exchange on Tezos blockchain.',
     website_link: 'https://www.madfish.solutions/about-us',
@@ -170,6 +180,11 @@ const tezosProjects = [
     featured: false,
     popular: false,
     date_added: '2022-01-01',
+    featuredAcrossSite: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+    },
     title: 'Smartlink',
     description:
       'Smartlink introduces Trust-as-a-Service, providing a decentralized escrow payment system for Web 3.0. enabling users to buy and sell products and services using cryptocurrencies.',
@@ -1824,5 +1839,7 @@ const tezosProjects = [
     img: 'https://tezosprojects.com/img/TQ%20Tezos.jpg',
   },
 ];
+
+export const resetProjectData = () => projectCategories.forEach((cat) => (cat.projects = []));
 
 export default tezosProjects;

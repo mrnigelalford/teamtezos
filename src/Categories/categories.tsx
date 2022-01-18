@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { projectCategories } from '../Data/data';
+import tezosProjects, { projectCategories } from '../Data/data';
 import { useNavigate } from 'react-router-dom';
 
 export const Item = styled(Paper)(({ theme }) => ({
@@ -21,6 +21,14 @@ interface Props {
 
 export default function Categories(props: Props) {
   let navigate = useNavigate();
+
+  projectCategories.map((cat) =>
+    tezosProjects.forEach((p) => {
+      if (p.type === cat.type) {
+        cat.projects.push(p);
+      }
+    })
+  );
 
   return (
     <Box sx={{ flexGrow: 1, marginTop: '2em', cursor: 'pointer' }}>

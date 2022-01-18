@@ -32,6 +32,15 @@ const TitleBar = (props: Props) => (
   </div>
 );
 
+const trimString = (str?: string): string => {
+  let finalStr = '';
+  const stringLength = 140;
+  if (!str) return finalStr;
+  if (str?.length <= stringLength) return str;
+  finalStr = str.slice(0, stringLength) + '...';
+  return finalStr;
+};
+
 export default function ProjectList(props: Props) {
   let navigate = useNavigate();
   return (
@@ -58,12 +67,12 @@ export default function ProjectList(props: Props) {
                   </Typography>
                 </div>
                 <Typography
-                  style={{ textAlign: 'left', marginTop: '1em' }}
+                  style={{ textAlign: 'left', marginTop: '1em', height: '8.5em' }}
                   variant="body2"
                   gutterBottom
                   component="div"
                 >
-                  {project.description}
+                  {trimString(project.description)}
                 </Typography>
                 <Button sx={{ marginTop: '1em', marginLeft: 'auto' }}>Learn more</Button>
               </Item>

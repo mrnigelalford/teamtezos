@@ -8,8 +8,14 @@ import ProjectBody from './projectBody';
 
 export default function Project() {
   const { id } = useParams();
-  const project = tezosProjects.filter((p) => p.title === id)[0];
   let navigate = useNavigate();
+
+  if (!id) return <></>;
+  console.log('type: ', typeof decodeURIComponent(id || ''));
+  const _id = decodeURIComponent(id);
+  console.log('type: ', _id);
+
+  const project = tezosProjects.filter((p) => p.title === _id)[0];
 
   const PromotedProject = (promotedProject: ProjectData) => (
     <Grid
