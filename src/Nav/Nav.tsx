@@ -158,15 +158,13 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="primary" enableColorOnDark>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
+        <Toolbar sx={{ backgroundColor: '#a1a1a1' }}>
+          <img src="/teamtezos.png" alt="logo" style={{ height: '2em' }} />
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ display: { sm: 'block', cursor: 'pointer' } }}
+            sx={{ display: { sm: 'block', cursor: 'pointer', marginLeft: '2em' } }}
             onClick={() => navigate('/')}
           >
             Team Tezos
