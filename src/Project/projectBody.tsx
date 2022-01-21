@@ -32,6 +32,24 @@ const ProjectBody = (props: { project: ProjectData }) => {
   let navigate = useNavigate();
   const goToProjectSite = (link?: string) => (link ? window.open(link, '_blank') : navigate('/'));
 
+  const getSocialURL = () => {
+    const socialLink = props.project.social_links;
+    if (socialLink && socialLink.length) {
+      return socialLink[0];
+    }
+    return '/';
+  };
+
+  const setType = (project: ProjectData): string => {
+    if (!project) return '';
+    let c;
+    if (project.categories) {
+      c = project?.categories[0].replace(/^\w/, (c: string) => c.toUpperCase());
+    }
+    const t = project?.type?.replace(/^\w/, (c) => c.toUpperCase());
+    return c || t || 'Test Type';
+  };
+
   return (
     <Grid
       container
@@ -50,7 +68,7 @@ const ProjectBody = (props: { project: ProjectData }) => {
           About {props.project.title}
         </Typography>
         <Typography style={{ textAlign: 'left' }} variant="body1" gutterBottom component="div">
-          {props.project.description}
+          {props.project.full_description || props.project.description}
         </Typography>
       </Grid>
       <Grid
@@ -71,9 +89,7 @@ const ProjectBody = (props: { project: ProjectData }) => {
           >
             <ProjectInfo
               title="Type:"
-              subtitle={
-                props.project.type?.replace(/^\w/, (c) => c.toUpperCase()) || 'Project Type'
-              }
+              subtitle={setType(props.project) || 'Project Type'}
               sx={{ borderBottom: 'none' }}
             />
             <ProjectInfo sx={{ display: 'none' }} title="Release date:" subtitle="Row Two" />
@@ -94,11 +110,12 @@ const ProjectBody = (props: { project: ProjectData }) => {
               borderRadius: '.3em',
               cursor: 'pointer',
             }}
-            onClick={() => {
-              goToProjectSite(props.project.social_link);
-            }}
           >
-            <FontAwesomeIcon icon={faTwitter} />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              onClick={() => window.open(getSocialURL(), '_blank')}
+              style={{ cursor: 'pointer' }}
+            />
           </Box>
           <Box
             sx={{

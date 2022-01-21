@@ -30,7 +30,7 @@ export interface Props {
 
 export default function Header() {
   let navigate = useNavigate();
-  const homeFeatured = tezosProjects.filter((p) => p.featuredAcrossSite?.home)[0];
+  const homeFeatured = tezosProjects.filter((p) => p.isFeatured?.home)[0];
 
   return (
     <Box style={{ marginTop: '2em' }} sx={{ flexGrow: 1 }}>

@@ -6,8 +6,10 @@ import { useParams } from 'react-router-dom';
 
 export default function Category() {
   const { id } = useParams();
-  const filteredCategory = tezosProjects.filter((p) => p.type?.toLowerCase() === id?.toLowerCase());
-  const categoryFeatured = tezosProjects.filter((p) => p.featuredAcrossSite?.categories)[0];
+  const filteredCategory = tezosProjects.filter(
+    (p) => p.categories[0]?.toLowerCase() === id?.toLowerCase()
+  );
+  const categoryFeatured = tezosProjects.filter((p) => p.isFeatured?.categories)[0];
 
   return (
     <Container sx={{ marginTop: '2em', maxWidth: 'initial !important' }}>
@@ -18,7 +20,7 @@ export default function Category() {
         <Grid item xs={12}>
           <Item style={{ height: 'auto', textAlign: 'left' }}>
             <Typography variant="subtitle2" gutterBottom component="div" sx={{ flexBasis: '50%' }}>
-              {filteredCategory[0].type} ({filteredCategory.length})
+              {filteredCategory[0].title} ({filteredCategory.length})
             </Typography>
             {filteredCategory.map((p, i) => (
               <Grid
@@ -50,7 +52,7 @@ export default function Category() {
                     gutterBottom
                     component="div"
                   >
-                    {p.description}
+                    {p.full_description}
                   </Typography>
                 </Grid>
               </Grid>

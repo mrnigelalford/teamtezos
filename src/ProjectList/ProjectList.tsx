@@ -63,7 +63,7 @@ export default function ProjectList(props: Props) {
           {props.projects?.slice(0, 4).map((project, i) => (
             <Grid item xs={12} sm={3} key={i}>
               <Item
-                sx={{ display: 'flex', flexWrap: 'wrap' }}
+                sx={{ display: 'flex', flexWrap: 'wrap', cursor: 'pointer' }}
                 onClick={() => navigate(`/project/${project.title}`)}
               >
                 <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -84,7 +84,7 @@ export default function ProjectList(props: Props) {
                   gutterBottom
                   component="div"
                 >
-                  {trimString(project.description)}
+                  {trimString(project.full_description || project.description)}
                 </Typography>
                 <Button sx={{ marginTop: '1em', marginLeft: 'auto' }}>Learn more</Button>
               </Item>

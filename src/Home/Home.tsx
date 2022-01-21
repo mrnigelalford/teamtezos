@@ -6,9 +6,9 @@ import Header from '../Header/Header';
 import ProjectList from '../ProjectList/ProjectList';
 
 export const Home = () => {
-  const [featuredProjects] = React.useState(tezosProjects.filter((p) => p.featured));
-  const [promotedProjects] = React.useState(tezosProjects.filter((p) => p.promoted));
-  const [popularProjects] = React.useState(tezosProjects.filter((p) => p.popular));
+  const [featuredProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.home));
+  const [promotedProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.promoted));
+  const [popularProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.popular));
 
   return (
     <Container>

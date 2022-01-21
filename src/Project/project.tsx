@@ -12,7 +12,7 @@ export default function Project() {
 
   const goToProjectSite = (link?: string) => (link ? window.open(link, '_blank') : navigate('/'));
 
-  const projectFeatured = tezosProjects.filter((p) => p.featuredAcrossSite?.home)[0];
+  const projectFeatured = tezosProjects.filter((p) => p.isFeatured?.home)[0];
 
   if (!id) return <></>;
   console.log('type: ', typeof decodeURIComponent(id || ''));
@@ -48,7 +48,7 @@ export default function Project() {
             {projectFeatured.title || 'Project Title'}
           </Typography>
           <Typography sx={{ fontSize: '.5em' }} variant="body1" gutterBottom component="div">
-            {projectFeatured.description || 'Project Description'}
+            {projectFeatured.short_description || 'Project Description'}
           </Typography>
         </Box>
       </Box>
@@ -93,9 +93,9 @@ export default function Project() {
           gutterBottom
           component="div"
         >
-          {project.description}
+          {project.full_description}
         </Typography>
-        <Button variant="outlined" onClick={() => goToProjectSite(project.website_link)}>
+        <Button variant="outlined" onClick={() => goToProjectSite(project.links.website)}>
           Visit Website
         </Button>
       </Box>

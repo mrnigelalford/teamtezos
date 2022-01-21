@@ -24,7 +24,7 @@ export default function Categories(props: Props) {
 
   projectCategories.map((cat) =>
     tezosProjects.forEach((p) => {
-      if (p.type === cat.type) {
+      if (p.categories[0] === cat.name) {
         cat.projects.push(p);
       }
     })
@@ -39,12 +39,12 @@ export default function Categories(props: Props) {
       <Grid container spacing={2}>
         {projectCategories
           .filter((cat) => cat.projects.length)
-          .map(({ type, icon }) => (
-            <Grid item xs={12} sm={3} onClick={() => navigate(`/category/${type}`)}>
+          .map(({ name, icon }) => (
+            <Grid item xs={12} sm={3} onClick={() => navigate(`/category/${name}`)}>
               <Item>
                 <FontAwesomeIcon icon={icon} />
                 <Typography variant="body1" component="div" sx={{ marginTop: '.8em' }}>
-                  {type}
+                  {name}
                 </Typography>
               </Item>
             </Grid>

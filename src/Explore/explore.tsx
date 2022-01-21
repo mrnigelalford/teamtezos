@@ -17,12 +17,12 @@ export default function Categories(props: Props) {
       </Typography>
 
       <Grid container spacing={2}>
-        {projectCategories.map(({ type, icon }) => (
+        {projectCategories.map(({ name, icon }) => (
           <Grid item xs={12} sm={3}>
             <Item>
               <FontAwesomeIcon icon={icon} />
               <Typography variant="body1" component="div" sx={{ marginTop: '.8em' }}>
-                {type}
+                {name}
               </Typography>
             </Item>
           </Grid>
