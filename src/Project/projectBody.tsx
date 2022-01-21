@@ -28,17 +28,17 @@ const ProjectInfo = (props: { title: string; subtitle: string; sx?: {} }) => (
   </div>
 );
 
-const ProjectBody = (props: { project: projectDataModel }) => {
-  const setType = (project: projectDataModel): string => {
-    if (!project) return '';
-    let c;
-    if (project.categories) {
-      c = project?.categories[0].replace(/^\w/, (c: string) => c.toUpperCase());
-    }
-    const t = project?.categories[0]?.replace(/^\w/, (c) => c.toUpperCase());
-    return c || t || 'Test Type';
-  };
+const setType = (project: projectDataModel): string => {
+  if (!project) return '';
+  let c;
+  if (project.categories.length) {
+    c = project?.categories[0].replace(/^\w/, (c: string) => c.toUpperCase());
+  }
+  const t = project?.categories[0]?.replace(/^\w/, (c) => c.toUpperCase());
+  return c || t || 'Test Type';
+};
 
+const ProjectBody = (props: { project: projectDataModel }) => {
   return (
     <Grid
       container

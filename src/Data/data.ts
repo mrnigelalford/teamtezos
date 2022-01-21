@@ -163,7 +163,7 @@ const tezosProjects: projectDataModel[] = [
       promoted: true,
     },
     date_added: new Date('2019-10-01'),
-    categories: [],
+    categories: [projectType.game],
     img: 'https://tezotop.io/wp-content/uploads/2021/03/tezotopia-logo.png',
   },
 

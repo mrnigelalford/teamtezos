@@ -15,11 +15,13 @@ export default function Project() {
   const projectFeatured = tezosProjects.filter((p) => p.isFeatured?.home)[0];
 
   if (!id) return <></>;
-  console.log('type: ', typeof decodeURIComponent(id || ''));
   const _id = decodeURIComponent(id);
   console.log('type: ', _id);
 
-  const project = tezosProjects.filter((p) => p.title === _id)[0];
+  console.log('tezotopia: ', tezosProjects[2]);
+
+  const project = tezosProjects.find((p) => p.title?.toLowerCase() === _id.toLowerCase());
+  if (!project) return <></>;
 
   const PromotedProject = () => (
     <Grid
