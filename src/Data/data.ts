@@ -19,29 +19,7 @@ import {
 import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
 
-export interface ProjectData {
-  type?: string;
-  title?: string;
-  description?: string;
-  short_description?: string;
-  full_description?: string;
-  website_link?: string;
-  social_link?: string;
-  social_links?: string[];
-  misc_link?: string;
-  telegram_link?: string;
-  img?: string;
-  promoted?: boolean;
-  featured?: boolean;
-  popular?: boolean;
-  isFeatured?: {
-    home?: boolean;
-    ecosystem?: boolean;
-    projects?: boolean;
-    categories?: boolean;
-  };
-  categories?: string[];
-}
+export const resetProjectData = () => projectCategories.forEach((cat) => (cat.projects = []));
 
 enum projectType {
   game = 'Game',
@@ -118,7 +96,102 @@ export interface projectDataModel {
 }
 
 const tezosProjects: projectDataModel[] = [
-  // wrap protocol
+  // Tezos Domains
+  {
+    title: 'Tezos Domains',
+    short_description: 'Friendly names on Tezos blockchain',
+    full_description:
+      "Tezos Domains is a distributed, open and extensible naming system using the Tezos blockchain. The main function is to translate a meaningful and user-friendly alias to it's corresponding Tezos address and vice versa. This translation is globally consistent so that all users see the same address for a given alias. Domains can be used to associate an address, share an avatar, publish contact information and more. Wallets and other projects in the ecosystem will let you use domain names directly instead of addresses and show domain names where Tezos addresses would be normally. The long term plan for Tezos Domains includes allowing websites to be built on Tezos Domains using decentralized content hosting like IPFS. This could serve as an alternative to traditional centralized solutions (i.e. DNS with centralized content hosting).",
+    links: {
+      website: 'https://tezos.domains/',
+      twitter: 'https://twitter.com/tezosdomains',
+      github: 'https://gitlab.com/tezos-domains',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.tools],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezosdomains/tezosdomains_logo.png',
+  },
+
+  // pixel potus
+  {
+    title: 'Pixel Potus',
+    short_description: 'Digital collectable competition',
+    full_description:
+      'We hold these truths to be self-evident, that all NFTs are NOT created equal, that some are endowed by their Creator with certain unalienable rights, that among these are Life, Liberty and the pursuit of Pixelation.',
+    links: {
+      website: 'https://www.pixelpotus.com/',
+      twitter: 'https://twitter.com/PixelPotus',
+      telegram: 'https://t.me/joinchat/YTjc8t6oiahkMzMx',
+      discord: 'https://discord.gg/CbdbvwtwkM',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.nft],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelpotus/pixelpotus_logo.png',
+  },
+
+  // Tezotopia
+  {
+    title: 'Tezotopia',
+    short_description: 'Virtual world with NFT yield farming',
+    full_description:
+      'Tezotopia is a Tezos-based Real-Time Strategy (RTS) gaming platform that allows players to acquire land (Tezotops), items and resources. Tezotops are yield farming NFTs. Buy, Sell, and Trade Digital Territories \u0026 Build Unique Virtual Assets in Tezotopia. Battle, earn, and win prizes such as Unobtanium.',
+    links: {
+      website: 'https://app.tezotopia.com/',
+      twitter: 'https://twitter.com/gifdotgames',
+      github: 'https://github.com/Gif-Games',
+      telegram: 'https://t.me/gifgames',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [],
+    img: 'https://tezotop.io/wp-content/uploads/2021/03/tezotopia-logo.png',
+  },
+
+  // Crunchy
+  {
+    title: 'Crunchy network',
+    short_description: 'DeFi-as-a-Service',
+    full_description:
+      'Crunchy provides DeFi services and solutions on Tezos to projects, developers, and end users. We like to think of ourselves as a DeFi-as-a-Service (DaaS) platform. Crunchy is maintained by independent developers and is governed by CrDAO holders.',
+    links: {
+      website: 'https://app.crunchy.network/',
+      twitter: 'https://twitter.com/CrunchyTez',
+      discord: 'https://discord.com/invite/99UnxxgB46',
+      telegram: 'https://t.me/crunchy_network',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.defi],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/crunchy/crunchy_logo.jpg',
+  },
+
+  // Wrap protocol
   {
     title: 'WRAP Protocol',
     short_description: 'Decentralized bridge between Ethereum and Tezos',
@@ -359,9 +432,9 @@ const tezosProjects: projectDataModel[] = [
 
   // Staker DAO
   {
+    title: 'StakerDAO',
     categories: [projectType.defi],
     date_added: new Date('2022-01-01'),
-    title: 'StakerDAO',
     short_description: 'Enabling the vibrant future of decentralized finance.community.',
     full_description:
       'StakerDAO is a governance protocol run by a community of blockchain and finance enthusiasts who make governance decisions for building cross-chain, decentralized financial assets in a compliant manner.',
@@ -1050,7 +1123,7 @@ const tezosProjects: projectDataModel[] = [
 
   // Tezex
   {
-    title: 'Tezex',
+    title: 'Tezex Bridge',
     categories: [projectType.exchange],
     links: {
       website: 'https://tezex.io',
@@ -1614,7 +1687,5 @@ const tezosProjects: projectDataModel[] = [
   */
   // ------------------------------------------------------------------
 ];
-
-export const resetProjectData = () => projectCategories.forEach((cat) => (cat.projects = []));
 
 export default tezosProjects;

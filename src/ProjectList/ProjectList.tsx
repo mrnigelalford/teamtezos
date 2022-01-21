@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Typography } from '@mui/material';
-import { ProjectData } from '../Data/data';
+import { projectDataModel } from '../Data/data';
 import { useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,13 +17,13 @@ interface Props {
   title: string;
   CTA?: string;
   EXTERNAL_URL: string;
-  projects?: ProjectData[];
+  projects?: projectDataModel[];
   onClick?: () => void;
 }
 interface TitleBarProps {
   title: string;
   CTA?: string;
-  projects?: ProjectData[];
+  projects?: projectDataModel[];
   onClick?: () => void;
 }
 
@@ -63,7 +63,7 @@ export default function ProjectList(props: Props) {
           {props.projects?.slice(0, 4).map((project, i) => (
             <Grid item xs={12} sm={3} key={i}>
               <Item
-                sx={{ display: 'flex', flexWrap: 'wrap', cursor: 'pointer' }}
+                sx={{ display: 'flex', flexWrap: 'wrap', cursor: 'pointer', height: '16.4em' }}
                 onClick={() => navigate(`/project/${project.title}`)}
               >
                 <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -84,7 +84,7 @@ export default function ProjectList(props: Props) {
                   gutterBottom
                   component="div"
                 >
-                  {trimString(project.full_description || project.description)}
+                  {trimString(project.short_description)}
                 </Typography>
                 <Button sx={{ marginTop: '1em', marginLeft: 'auto' }}>Learn more</Button>
               </Item>

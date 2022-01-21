@@ -1,8 +1,8 @@
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import { ProjectData } from '../Data/data';
+import { projectDataModel } from '../Data/data';
 
 const mediumGrey = '#f0efef';
 const grey = '#d2d2d2';
@@ -28,25 +28,14 @@ const ProjectInfo = (props: { title: string; subtitle: string; sx?: {} }) => (
   </div>
 );
 
-const ProjectBody = (props: { project: ProjectData }) => {
-  let navigate = useNavigate();
-  const goToProjectSite = (link?: string) => (link ? window.open(link, '_blank') : navigate('/'));
-
-  const getSocialURL = () => {
-    const socialLink = props.project.social_links;
-    if (socialLink && socialLink.length) {
-      return socialLink[0];
-    }
-    return '/';
-  };
-
-  const setType = (project: ProjectData): string => {
+const ProjectBody = (props: { project: projectDataModel }) => {
+  const setType = (project: projectDataModel): string => {
     if (!project) return '';
     let c;
     if (project.categories) {
       c = project?.categories[0].replace(/^\w/, (c: string) => c.toUpperCase());
     }
-    const t = project?.type?.replace(/^\w/, (c) => c.toUpperCase());
+    const t = project?.categories[0]?.replace(/^\w/, (c) => c.toUpperCase());
     return c || t || 'Test Type';
   };
 
@@ -68,7 +57,7 @@ const ProjectBody = (props: { project: ProjectData }) => {
           About {props.project.title}
         </Typography>
         <Typography style={{ textAlign: 'left' }} variant="body1" gutterBottom component="div">
-          {props.project.full_description || props.project.description}
+          {props.project.full_description}
         </Typography>
       </Grid>
       <Grid
@@ -111,11 +100,34 @@ const ProjectBody = (props: { project: ProjectData }) => {
               cursor: 'pointer',
             }}
           >
-            <FontAwesomeIcon
-              icon={faTwitter}
-              onClick={() => window.open(getSocialURL(), '_blank')}
-              style={{ cursor: 'pointer' }}
-            />
+            {props.project.links.twitter && (
+              <FontAwesomeIcon
+                icon={faTwitter}
+                onClick={() => window.open(props.project.links.twitter, '_blank')}
+                style={{ cursor: 'pointer' }}
+              />
+            )}
+            {props.project.links.discord && (
+              <FontAwesomeIcon
+                icon={faDiscord}
+                onClick={() => window.open(props.project.links.discord, '_blank')}
+                style={{ cursor: 'pointer', marginLeft: '1em' }}
+              />
+            )}
+            {props.project.links.telegram && (
+              <FontAwesomeIcon
+                icon={faTelegram}
+                onClick={() => window.open(props.project.links.telegram, '_blank')}
+                style={{ cursor: 'pointer', marginLeft: '1em' }}
+              />
+            )}
+            {props.project.links.website && (
+              <FontAwesomeIcon
+                icon={faGlobe}
+                onClick={() => window.open(props.project.links.website, '_blank')}
+                style={{ cursor: 'pointer', marginLeft: '1em' }}
+              />
+            )}
           </Box>
           <Box
             sx={{

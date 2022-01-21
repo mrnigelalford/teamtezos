@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import tezosProjects, { ProjectData } from '../Data/data';
+import tezosProjects, { projectDataModel } from '../Data/data';
 import { FeatureBox } from './FeatureBox';
 
 export const Item = styled(Paper)(({ theme }) => ({
@@ -25,7 +25,7 @@ const headerText = {
 };
 
 export interface Props {
-  project: ProjectData;
+  project: projectDataModel;
 }
 
 export default function Header() {

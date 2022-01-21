@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Link, Typography } from '@mui/material';
 import { Props, Item } from './Header';
 
@@ -15,7 +14,7 @@ export const FeatureBox = ({ project }: Props) => (
         {project.short_description}
       </Typography>
       <Link href="#" variant="body2">
-        {project.website_link}
+        {project.links.website}
       </Link>
     </div>
     <img

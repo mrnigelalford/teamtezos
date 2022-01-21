@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useNavigate, useParams } from 'react-router-dom';
-import tezosProjects, { ProjectData } from '../Data/data';
+import tezosProjects from '../Data/data';
 import { logo } from '../Header/Header';
 import ProjectList from '../ProjectList/ProjectList';
 import ProjectBody from './projectBody';
@@ -21,7 +21,7 @@ export default function Project() {
 
   const project = tezosProjects.filter((p) => p.title === _id)[0];
 
-  const PromotedProject = (promotedProject: ProjectData) => (
+  const PromotedProject = () => (
     <Grid
       sm={4}
       sx={{
