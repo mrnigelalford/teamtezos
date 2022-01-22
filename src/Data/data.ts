@@ -96,6 +96,144 @@ export const projectCategories = [
 ];
 
 const tezosProjects: Project[] = [
+  // TezDAO
+  {
+    title: 'TezDAO',
+    short_description:
+      'TezDAO is the Decentralized Autonomous Organisation empowering the community to propose and fund projects on Tezos.',
+    full_description:
+      'A truly decentralized autonomous organization, tezDAO was created and launched by members of the Tezos community for everyone to participate. Holders of $TezDAO tokens can submit proposals on the direction and development of the DAO as well as vote on the distribution of grants to ecosystem projects. Staking of $TezDAO and the provision of liquidity on Tezos based decentralized exchanges are incentivized with a total of 30% of the total token supply.',
+    links: {
+      website: 'https://tezdao.org/#',
+      twitter: 'https://twitter.com/tezDAO',
+      discord: 'https://discord.gg/7BYTYyZfdK',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.dao],
+    img: 'https://tezdao.org/assets/images/tezoslogo3.png',
+  },
+
+  // FX Hash
+  {
+    title: 'FX Hash',
+    short_description:
+      'fxhash is an open platform to create and collect generative NFTs on the tezos blockchain',
+    full_description:
+      'A truly decentralized autonomous organization, tezDAO was created and launched by members of the Tezos community for everyone to participate. Holders of $TezDAO tokens can submit proposals on the direction and development of the DAO as well as vote on the distribution of grants to ecosystem projects. Staking of $TezDAO and the provision of liquidity on Tezos based decentralized exchanges are incentivized with a total of 30% of the total token supply.',
+    links: {
+      website: 'https://tezdao.org/#',
+      twitter: 'https://twitter.com/tezDAO',
+      discord: 'https://discord.gg/7BYTYyZfdK',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.dao],
+    img: 'https://www.fxhash.xyz/favicon-32x32.png',
+  },
+
+  // Versum Official
+  {
+    title: 'Versum Official',
+    short_description: 'Versum is an NFT platform and metaverse on the Tezos blockchain.',
+    full_description:
+      'Our primary focus is on the art, user experience, and scalability. First and foremost, we prioritize art. Our minimalistic UI was designed so that your eyes are drawn to the art — the platform is there, but you don’t see it.',
+    links: {
+      discord: 'https://discord.gg/xkf6TG7A2W',
+      twitter: 'https://twitter.com/versumofficial',
+      website: 'https://versum.xyz/',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.nft],
+    img: 'https://cdn.dribbble.com/users/8635561/avatars/normal/1e471aef07f69f7e67c8ffc70bbfb016.png?1627250194',
+  },
+
+  // Stake Now
+  {
+    title: 'Stake Now',
+    short_description: 'Versum is an NFT platform and metaverse on the Tezos blockchain.',
+    full_description:
+      'Our primary focus is on the art, user experience, and scalability. First and foremost, we prioritize art. Our minimalistic UI was designed so that your eyes are drawn to the art — the platform is there, but you don’t see it.',
+    links: {
+      discord: 'https://discord.gg/8JbQv6v5',
+      twitter: 'https://twitter.com/StakeNow',
+      website: 'https://stakenow.fi/',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.nft],
+    img: 'https://twitter.com/StakeNow/photo',
+  },
+
+  // Spicy Swap
+  {
+    title: 'Spicy Swap',
+    short_description: 'Provide Liquidity, and Spice Farm!',
+    full_description: 'SpicySwap is a next-generation DEX built by Genius Contracts ...',
+    links: {
+      twitter: 'https://twitter.com/SpicySwap',
+      website: 'https://spicyswap.xyz',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.defi],
+    img: 'https://spicyswap.xyz/assets/sswap-logo-LP.png',
+  },
+  // Instaraise
+  {
+    title: 'Instaraise',
+    short_description:
+      'Instaraise is building DeFi Universe on Tezos. We support projects to raise fund, build communities and turn their ideas into products.',
+    full_description:
+      'Instaraise is building DeFi Universe on Tezos. We support projects to raise fund, build communities and turn their ideas into products.',
+    links: {
+      telegram: 'http://telegram.me/Instaraise',
+      twitter: 'https://twitter.com/Instaraise',
+      website: 'https://instaraise.io',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('2019-10-01'),
+    categories: [projectType.defi],
+    img: 'https://www.instaraise.io/static/media/Logo_white.fe663a02.png',
+  },
+
   // Tezos Domains
   {
     title: 'Tezos Domains',
