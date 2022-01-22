@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Button, Typography } from '@mui/material';
-import { projectDataModel } from '../Data/data';
+import { Project } from '../Data/data';
 import { useNavigate } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,13 +17,13 @@ interface Props {
   title: string;
   CTA?: string;
   EXTERNAL_URL: string;
-  projects?: projectDataModel[];
+  projects?: Project[];
   onClick?: () => void;
 }
 interface TitleBarProps {
   title: string;
   CTA?: string;
-  projects?: projectDataModel[];
+  projects?: Project[];
   onClick?: () => void;
 }
 

@@ -2,7 +2,7 @@ import { faDiscord, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-i
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { projectDataModel } from '../Data/data';
+import { Project } from '../Data/data';
 
 const mediumGrey = '#f0efef';
 const grey = '#d2d2d2';
@@ -28,7 +28,7 @@ const ProjectInfo = (props: { title: string; subtitle: string; sx?: {} }) => (
   </div>
 );
 
-const setType = (project: projectDataModel): string => {
+const setType = (project: Project): string => {
   if (!project) return '';
   let c;
   if (project.categories.length) {
@@ -38,7 +38,7 @@ const setType = (project: projectDataModel): string => {
   return c || t || 'Test Type';
 };
 
-const ProjectBody = (props: { project: projectDataModel }) => {
+const ProjectBody = (props: { project: Project }) => {
   return (
     <Grid
       container

@@ -19,56 +19,7 @@ import {
 import { faArtstation } from '@fortawesome/free-brands-svg-icons';
 import { faCreditCard, faIdBadge } from '@fortawesome/free-regular-svg-icons';
 
-export const resetProjectData = () => projectCategories.forEach((cat) => (cat.projects = []));
-
-enum projectType {
-  game = 'Game',
-  tools = 'Tools',
-  developers = 'Developers',
-  other = 'Other',
-  nft = 'NFT',
-  defi = 'DEFI',
-  dao = 'DAO',
-  dapp = 'dapp',
-  exchange = 'Exchanges (DEX)',
-  identity = 'Identity',
-  community = 'Community',
-  gaming = 'Gaming',
-  insurance = 'Insurance',
-  corporateBaker = 'Corporate Baker',
-  token = 'Stablecoin',
-  realEstate = 'Real Estate',
-  wallet = 'Wallet',
-  oracle = 'Oracle',
-  data = 'Data',
-  education = 'Education',
-  launchpad = 'Launchpad',
-  bakerTool = 'Baker Tool',
-}
-
-export const projectCategories = [
-  { name: projectType.nft, icon: faArtstation, projects: [] as projectDataModel[] },
-  { name: projectType.defi, icon: faCoins, projects: [] as projectDataModel[] },
-  { name: projectType.dapp, icon: faUsers, projects: [] as projectDataModel[] },
-  { name: projectType.tools, icon: faBalanceScaleRight, projects: [] as projectDataModel[] },
-  { name: projectType.developers, icon: faPaw, projects: [] as projectDataModel[] },
-  { name: projectType.realEstate, icon: faHouseDamage, projects: [] as projectDataModel[] },
-  { name: projectType.token, icon: faDonate, projects: [] as projectDataModel[] },
-  { name: projectType.wallet, icon: faWallet, projects: [] as projectDataModel[] },
-  { name: projectType.corporateBaker, icon: faSchool, projects: [] as projectDataModel[] },
-  { name: projectType.dao, icon: faPeopleArrows, projects: [] as projectDataModel[] },
-  { name: projectType.exchange, icon: faPiggyBank, projects: [] as projectDataModel[] },
-  { name: projectType.identity, icon: faIdBadge, projects: [] as projectDataModel[] },
-  { name: projectType.community, icon: faHeart, projects: [] as projectDataModel[] },
-  { name: projectType.oracle, icon: faGlasses, projects: [] as projectDataModel[] },
-  { name: projectType.data, icon: faDatabase, projects: [] as projectDataModel[] },
-  { name: projectType.gaming, icon: faGamepad, projects: [] as projectDataModel[] },
-  { name: projectType.education, icon: faMoneyBillAlt, projects: [] as projectDataModel[] },
-  { name: projectType.insurance, icon: faCreditCard, projects: [] as projectDataModel[] },
-  { name: projectType.launchpad, icon: faRocket, projects: [] as projectDataModel[] },
-];
-
-export interface projectDataModel {
+export interface Project {
   title?: string;
   categories: projectType[];
   date_added: Date;
@@ -95,7 +46,56 @@ export interface projectDataModel {
   };
 }
 
-const tezosProjects: projectDataModel[] = [
+enum projectType {
+  game = 'Game',
+  tools = 'Tools',
+  developers = 'Developers',
+  other = 'Other',
+  nft = 'NFT',
+  defi = 'DEFI',
+  dao = 'DAO',
+  dapp = 'dapp',
+  exchange = 'Exchanges (DEX)',
+  identity = 'Identity',
+  community = 'Community',
+  gaming = 'Gaming',
+  insurance = 'Insurance',
+  corporateBaker = 'Corporate Baker',
+  token = 'Stablecoin',
+  realEstate = 'Real Estate',
+  wallet = 'Wallet',
+  oracle = 'Oracle',
+  data = 'Data',
+  education = 'Education',
+  launchpad = 'Launchpad',
+  bakerTool = 'Baker Tool',
+}
+
+export const resetProjectData = () => projectCategories.forEach((cat) => (cat.projects = []));
+
+export const projectCategories = [
+  { name: projectType.nft, icon: faArtstation, projects: [] as Project[] },
+  { name: projectType.defi, icon: faCoins, projects: [] as Project[] },
+  { name: projectType.dapp, icon: faUsers, projects: [] as Project[] },
+  { name: projectType.tools, icon: faBalanceScaleRight, projects: [] as Project[] },
+  { name: projectType.developers, icon: faPaw, projects: [] as Project[] },
+  { name: projectType.realEstate, icon: faHouseDamage, projects: [] as Project[] },
+  { name: projectType.token, icon: faDonate, projects: [] as Project[] },
+  { name: projectType.wallet, icon: faWallet, projects: [] as Project[] },
+  { name: projectType.corporateBaker, icon: faSchool, projects: [] as Project[] },
+  { name: projectType.dao, icon: faPeopleArrows, projects: [] as Project[] },
+  { name: projectType.exchange, icon: faPiggyBank, projects: [] as Project[] },
+  { name: projectType.identity, icon: faIdBadge, projects: [] as Project[] },
+  { name: projectType.community, icon: faHeart, projects: [] as Project[] },
+  { name: projectType.oracle, icon: faGlasses, projects: [] as Project[] },
+  { name: projectType.data, icon: faDatabase, projects: [] as Project[] },
+  { name: projectType.gaming, icon: faGamepad, projects: [] as Project[] },
+  { name: projectType.education, icon: faMoneyBillAlt, projects: [] as Project[] },
+  { name: projectType.insurance, icon: faCreditCard, projects: [] as Project[] },
+  { name: projectType.launchpad, icon: faRocket, projects: [] as Project[] },
+];
+
+const tezosProjects: Project[] = [
   // Tezos Domains
   {
     title: 'Tezos Domains',
@@ -119,6 +119,327 @@ const tezosProjects: projectDataModel[] = [
     img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tezosdomains/tezosdomains_logo.png',
   },
 
+  // 'Hic et Nunc'
+  {
+    title: 'Hic et Nunc',
+    short_description: 'NFT marketplace',
+    full_description:
+      'The H=N platform combines the cost-effective utility working artists need and the eco-friendly characteristics they care about.',
+    links: {
+      website: 'https://www.hicetnunc.art/',
+      twitter: 'https://twitter.com/hicetnunc2000',
+      github: 'https://github.com/hicetnunc2000',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.nft],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/hen/hen_logo.jpg',
+  },
+
+  // 'AKA Swap'
+  {
+    title: 'akaSwap',
+    short_description: 'A friendly, open and green NFT marketplace.',
+    full_description:
+      'We are committed to building a simple, friendly, and open green NFT trading platform for everyone to easily create, trade, appreciate, collect, and promote various NFT valuable assets from all over the world. \nakaSwap hopes to open a new source of income for artists and provide collectors with a place to store and trade artworks. Artists can auction their creations or sell them at a customized price. \n* We recommend using Google Chrome, Mozilla Firefox or Microsoft Edge for the best experience.',
+    links: {
+      website: 'https://www.akaswap.com/',
+      twitter: 'https://twitter.com/AkaswapCom',
+      github: 'https://github.com/akaSwap',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.nft],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/akaswap/akaswap_logo.jpg',
+  },
+
+  // 'Space Farm'
+  {
+    title: 'Space Farm',
+    short_description: 'Token Farming platform',
+    full_description:
+      'Stake your FLAME tokens and LP liquidity tokens to earn FLAME in our farms. Use your referral link to boost your stack.',
+    links: {
+      website: 'https://flame.spacefarm.xyz/',
+      twitter: 'https://twitter.com/FlameDeFi',
+      blog: 'https://flamedefi.medium.com/',
+      telegram: 'https://t.me/FLAMEtokenFarm',
+    },
+    isFeatured: {
+      home: true,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date(''),
+    categories: [projectType.defi],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/flame/flame_logo.jpg',
+  },
+
+  // Alien's Farm
+  {
+    title: "Alien's Farm",
+    short_description: 'The first alien yield farm on Tezos',
+    full_description:
+      "Alien's Farm is an open-source platform with a couple of farming products on Tezos blockchain aimed to bring fresh financial abstractions to the network and open up new economic opportunities for community members who are eager for yield mechanics.",
+    links: {
+      website: 'https://aliens.farm/',
+      twitter: 'https://twitter.com/tezaliensfarm',
+      github: 'https://github.com/degentech/aliensfarm',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.defi],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/aliensfarm/aliensfarm_logo.png',
+  },
+
+  // FARM
+  {
+    title: 'FARM',
+    short_description: 'FARMing and Rotational Airdrops',
+    full_description:
+      'FARM is a Tezos-based farming platform that uses staked SOIL token LP to generate FARM. FARM token is the utility token for the FARM platform. You can stake FARM LP on our website to qualify for airdrops of XTZ, Teztees, NFTs, and various other assets. You can also use FARM to farm Dos Esposas ingredients on Crunchy.network.',
+    links: {
+      website: 'https://farmsoil.xyz/farm',
+    },
+    isFeatured: {
+      home: true,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.defi],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/farmsoil/farmsoil_logo.png',
+  },
+
+  // World War Tez
+  {
+    title: 'World War Tez',
+    short_description: 'RPG where players battle each other',
+    full_description:
+      'An RPG-style dApp where players can power up, battle each other to conquer territories, earn bonuses from liquidity pool balances and equipment, and trade avatars with other players.',
+    links: {
+      website: 'https://www.worldwartez.com',
+      telegram: 'https://t.me/gutsgaming',
+      twitter: 'https://twitter.com/worldwartez',
+      github: 'https://github.com/guts-gaming/world-war-tez',
+    },
+    isFeatured: {
+      home: true,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://i1.wp.com/xtz.news/wp-content/uploads/2021/04/GUTS1.jpg?w=1500&ssl=1',
+  },
+
+  // Project Uanon
+  {
+    title: 'Project Uanon',
+    short_description: 'The Truth as entertainment',
+    full_description:
+      "Project Uanon is a dystopian cyber adventure puzzle set in the near term future. It's the first game to use Zero Knowledge cryptographic proofs to grant and distribute rewards, and prove player progress and leaderboard point rankings. Players proceed through 6 stages of the game world, called “seasons”, competing for seasonal prizes and an overall prize awarded to the first player to correctly solve all 6 seasons. In this game world, mainstream media is rarely trusted and conspiracy theories abound. Certifiable truth comes at premium value, disseminated in the form of NFT tokens called Truth Shards.",
+    links: {
+      website: 'https://uanon.observer/',
+      twitter: 'https://twitter.com/chainofinsight',
+      github: 'https://github.com/Chain-of-Insight',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_logo.png',
+  },
+
+  // Bazaar
+  {
+    title: 'Bazaar',
+    short_description: 'Carbon-Offset NFTs',
+    full_description:
+      'Bazaar Market is the first ever carbon-negative NFT Market, based on OpenMinter, an open source platform for making dApps on Tezos.',
+    links: {
+      website: 'https://bazaarnft.xyz/',
+      twitter: 'https://twitter.com/BazaarNfts',
+      github: 'https://github.com/BazaarMarket/Bazaar-Market',
+      telegram: 'https://t.me/joinchat/L_izbzRXxLNhNTY5',
+      discord: 'https://discord.gg/mnYZwv8s5a',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.nft],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/bazaar/bazaar_logo.png',
+  },
+
+  // Tezos Mandala
+  {
+    title: 'Tezos Mandala',
+    short_description: 'Unique digital mandalas as NFTs',
+    full_description:
+      'Create your unique digital mandalas as NFTs. All mandalas are recorded in the Tezos blockchain. This makes them truly decentralized, and ever-lasting.',
+    links: {
+      website: 'https://tezos-mandala.art',
+      telegram: 'https://t.me/buttonists',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.nft],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/mandala/mandala_logo.png',
+  },
+
+  // Golden Goals
+  {
+    title: 'Golden Goals',
+    short_description: 'Football oriented NFT marketplace',
+    full_description:
+      "Golden Goals is the new virtual gallery for football clubs and fan art. We believe that football is an art. Thanks to Blockchain technology, you can build your very own virtual collection of football art. You can find exclusive content from clubs and artists that you'll be able to share and trade! Official clubs account will create content, and fans/artists are able to collect it or even create NFTs associated with their favorite team. Your collection is your emotions' museum.",
+    links: {
+      website: 'https://goldengoals.io/',
+      twitter: 'https://twitter.com/goldengoals_io',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/goldengoals/goldengoals_logo.jpg',
+  },
+
+  // TzColors
+  {
+    title: 'TzColors',
+    short_description: 'Unique colors as NFT tokens',
+    full_description:
+      'Get your hands on one of the 1690 unique NFT tzcolors tokens. Buy, Bid and Resell your Colors! Have fun and remeber, they are limited ;) Each color artwork is sold in an inital account. The inital account has a duration of 7 days. On completion, the highest bidder wins the color and can claim it. The reward of all initial accounts go to a specified address. An owner of a color artwork can create a new auction and specify the minimum bid amount and the auction duration. Each bid additionally extends the auction end time by 5 minutes. The highest bidder can claim the token and the previous owner can claim the reward.',
+    links: {
+      website: 'https://tzcolors.com/',
+      twitter: 'https://twitter.com/tzcolors',
+      github: 'https://github.com/tzcolors',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/tzcolors/tzcolors_logo.png',
+  },
+
+  // Pixel Posh
+  {
+    title: 'Pixel Posh',
+    short_description: '999 very fancy generative pixel art portraits.',
+    full_description:
+      'Pixel Posh is a series of 999 very fancy generative pixel art portraits, created by Lanton Mills. Each portrait is unique. There are 37 different species and thousands of possible clothing combinations.',
+    links: {
+      website: 'https://pixelpo.sh',
+      twitter: 'https://twitter.com/pixelposhtez',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/pixelposh/pixelposh_logo.jpg',
+  },
+
+  // ByteBlock NFT
+  {
+    title: 'ByteBlock NFT',
+    short_description: 'Empowering millions of artist through Tezos.',
+    full_description:
+      'byteblock.art is the first FA2 marketplace that is aiming to empower millions of artist. We are the first NFT platform on Tezos to launch NFT-as-a-Service (NaaS)',
+    links: {
+      website: 'https://byteblock.art/',
+      twitter: 'https://twitter.com/ByteBlockNFT',
+      telegram: 'https://t.me/ByteBlockNFT',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_logo.png',
+  },
+
+  // TZButton
+  {
+    title: 'TzButton',
+    short_description: 'Tezos-blockchain based game',
+    full_description:
+      'The TzButton experiment is controlled by a smart contract deployed on the Tezos blockchain. Whenever anyone presses the button three things will happen:\n1. You will add 0.2 tez to the smart contract’s balance\n2. The address of the sender will become the leader\n3. The countdown is reset\n\nThe address that is the leader after the countdown expired will be eligible to withdraw the total balance on the smart contract.',
+    links: {
+      website: 'https://tzbutton.io/',
+      telegram: 'https://t.me/AirGap',
+      twitter: 'https://twitter.com/AirGap_it',
+      github: 'https://github.com/airgap-it/airgap-wallet',
+    },
+    isFeatured: {
+      home: false,
+      ecosystem: false,
+      categories: true,
+      popular: false,
+      promoted: true,
+    },
+    date_added: new Date('01-01-2019'),
+    categories: [projectType.gaming],
+    img: 'https://bcd-static-assets.fra1.digitaloceanspaces.com/dapps/uanon/uanon_logo.png',
+  },
   // pixel potus
   {
     title: 'Pixel Potus',
@@ -183,7 +504,7 @@ const tezosProjects: projectDataModel[] = [
       home: false,
       ecosystem: false,
       categories: true,
-      popular: false,
+      popular: true,
       promoted: true,
     },
     date_added: new Date('2019-10-01'),
@@ -323,10 +644,10 @@ const tezosProjects: projectDataModel[] = [
       website: 'https://youves.com/',
     },
     isFeatured: {
-      home: false,
+      home: true,
       ecosystem: false,
       categories: false,
-      popular: false,
+      popular: true,
       promoted: false,
     },
     categories: [projectType.token],

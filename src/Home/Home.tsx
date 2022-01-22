@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import ProjectList from '../ProjectList/ProjectList';
 
 export const Home = () => {
-  const [featuredProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.home));
+  const [recentlyAdded] = React.useState(tezosProjects.filter((p) => p.isFeatured.home));
   const [promotedProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.promoted));
   const [popularProjects] = React.useState(tezosProjects.filter((p) => p.isFeatured.popular));
 
@@ -24,7 +24,7 @@ export const Home = () => {
       <ProjectList
         title="Recently Added"
         CTA="Show all"
-        projects={featuredProjects}
+        projects={recentlyAdded}
         EXTERNAL_URL="/"
       />
     </Container>

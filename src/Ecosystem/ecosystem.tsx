@@ -3,7 +3,7 @@ import { Item } from '../Categories/categories';
 import { FeatureBox } from '../Header/FeatureBox';
 
 import React, { useEffect } from 'react';
-import tezosProjects, { projectCategories, resetProjectData, projectDataModel } from '../Data/data';
+import tezosProjects, { projectCategories, resetProjectData, Project } from '../Data/data';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {}
@@ -14,9 +14,9 @@ export default function Ecosystem(props: Props) {
 
   useEffect(() => {
     resetProjectData();
-    tezosProjects.forEach((project: projectDataModel) => {
+    tezosProjects.forEach((project: Project) => {
       const match = projectCategories.find((cat) => project?.categories[0] === cat.name);
-      if (match) match.projects.push(project as projectDataModel);
+      if (match) match.projects.push(project as Project);
     });
     setProjects(projectCategories.filter((cat) => cat.projects.length));
   }, []);
