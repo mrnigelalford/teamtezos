@@ -187,7 +187,7 @@ const tezosProjects: Project[] = [
     },
     date_added: new Date('2019-10-01'),
     categories: [projectType.nft],
-    img: 'https://twitter.com/StakeNow/photo',
+    img: 'https://pbs.twimg.com/profile_images/1163864924587790336/qwqKjlXq_400x400.jpg',
   },
 
   // Spicy Swap
