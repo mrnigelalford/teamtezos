@@ -10,7 +10,7 @@ import Project from './Project/project';
 import ReactGA from 'react-ga';
 
 function App() {
-  const sampleTrackingCode = 'G-YTKY2XZRC2';
+  const sampleTrackingCode = 'G-6GLHYDGEKQ';
 
   ReactGA.initialize(sampleTrackingCode);
   ReactGA.pageview(window.location.pathname);
